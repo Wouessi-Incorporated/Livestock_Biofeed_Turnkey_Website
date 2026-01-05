@@ -26,9 +26,13 @@ img { max-width: 100%; height: auto; }
   border-bottom: 1px solid rgba(63,101,62,0.12);
 }
 .nav-inner {
-  display:flex; align-items:center; justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 14px 0;
   gap: 16px;
+  flex-wrap: wrap;
+  position: relative;
 }
 .brand {
   display:flex; align-items:center; gap: 12px;
@@ -41,11 +45,21 @@ img { max-width: 100%; height: auto; }
 .brand .name span { font-size: 12px; color: var(--muted); }
 
 .nav-links {
-  display:flex; align-items:center; gap: 18px;
-  font-weight: 600; color: rgba(30,42,30,0.9);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: rgba(30,42,30,0.9);
+  flex-wrap: wrap;
 }
-.nav-links a { padding: 8px 10px; border-radius: 10px; }
-.nav-links a:hover { background: rgba(136,152,119,0.18); }
+.nav-links a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.nav-links a:hover {
+  background: rgba(136,152,119,0.18);
+}
 
 .actions {
   display:flex; align-items:center; gap: 10px;
@@ -85,12 +99,83 @@ img { max-width: 100%; height: auto; }
 }
 
 .menu-btn {
-  display:none;
+  display: none;
   background: transparent;
   border: 1px solid rgba(63,101,62,0.22);
   border-radius: 12px;
   padding: 10px 12px;
   font-weight: 800;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(63,101,62,0.12);
+  margin-top: 12px;
+}
+
+.mobile-menu a {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid rgba(63,101,62,0.08);
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .actions {
+    margin-left: auto;
+  }
+  
+  .menu-btn {
+    display: block;
+  }
+  
+  .mobile-menu.show {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    width: 100%;
+  }
+  
+  .actions {
+    gap: 8px;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .container {
+    width: calc(100% - 24px);
+  }
 }
 
 .hero {
@@ -224,6 +309,13 @@ h1 {
   display:grid;
   gap: 10px;
 }
+.inputable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 100%;
+  table-layout: auto;
+}
+
 .input {
   width: 100%;
   padding: 12px 12px;
