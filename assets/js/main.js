@@ -21,36 +21,68 @@ function setLinkOrDisable(el, url) {
 // Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileLangBtn = document.getElementById('mobileLangBtn');
+const desktopLangBtn = document.getElementById('langBtn');
 
+function toggleMobileMenu() {
+  const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+  menuBtn.setAttribute('aria-expanded', !isExpanded);
+  menuBtn.setAttribute('aria-label', !isExpanded ? 'Close menu' : 'Open menu');
+  mobileMenu.classList.toggle('show', !isExpanded);
+  
+  // Toggle body scroll when menu is open
+  document.body.style.overflow = !isExpanded ? 'hidden' : '';
+}
+
+function closeMobileMenu() {
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.setAttribute('aria-label', 'Open menu');
+  mobileMenu.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// Toggle mobile menu
 if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
-    const isExpanded = mobileMenu.classList.contains('show');
-    menuBtn.setAttribute('aria-expanded', isExpanded);
-    menuBtn.setAttribute('aria-label', isExpanded ? 'Close menu' : 'Open menu');
-    menuBtn.textContent = isExpanded ? 'CLOSE' : 'MENU';
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMobileMenu();
   });
   
   // Close menu when clicking on a link
   const mobileLinks = mobileMenu.querySelectorAll('a');
   mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.setAttribute('aria-label', 'Open menu');
-      menuBtn.textContent = 'MENU';
-    });
+    link.addEventListener('click', closeMobileMenu);
   });
   
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove('show');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.setAttribute('aria-label', 'Open menu');
-      menuBtn.textContent = 'MENU';
+      closeMobileMenu();
     }
   });
+  
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+      closeMobileMenu();
+    }
+  });
+}
+
+// Sync language buttons
+if (mobileLangBtn && desktopLangBtn) {
+  function updateLanguageButtons() {
+    const currentLang = document.documentElement.lang || 'en';
+    const newLang = currentLang === 'en' ? 'fr' : 'en';
+    mobileLangBtn.textContent = newLang.toUpperCase();
+    desktopLangBtn.textContent = newLang.toUpperCase();
+    document.documentElement.lang = newLang;
+  }
+  
+  mobileLangBtn.addEventListener('click', updateLanguageButtons);
+  if (desktopLangBtn) {
+    desktopLangBtn.addEventListener('click', updateLanguageButtons);
+  }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
