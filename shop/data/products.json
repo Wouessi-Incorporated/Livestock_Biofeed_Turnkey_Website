@@ -2,55 +2,101 @@
   {
     "id": "ponte",
     "name": "Bio-Aliment Ponte+",
+    "name_fr": "Bio-Aliment Ponte+",
     "price": 39.99,
-    "weight": "50kg"
+    "weight": "50kg",
+    "category": "feed",
+    "badge": "Best Seller",
+    "rating": 4.8,
+    "reviews": 124,
+    "image": "../assets/img/products/poultry_layer_feed_bag_1770049507739.png"
   },
   {
     "id": "broiler",
     "name": "Bio-Aliment Poulet Chair",
+    "name_fr": "Bio-Aliment Poulet Chair",
     "price": 42.5,
-    "weight": "50kg"
+    "weight": "50kg",
+    "category": "feed",
+    "badge": "Popular",
+    "rating": 4.9,
+    "reviews": 89,
+    "image": "../assets/img/products/broiler_chicken_feed_bag_1770049525866.png"
   },
   {
     "id": "tilapia",
     "name": "Bio-Aliment Tilapia Max",
+    "name_fr": "Bio-Aliment Tilapia Max",
     "price": 48.0,
-    "weight": "50kg"
+    "weight": "50kg",
+    "category": "feed",
+    "badge": "High Protein",
+    "rating": 4.7,
+    "reviews": 56,
+    "image": "../assets/img/products/tilapia_fish_feed_pellets_1770049543107.png"
   },
   {
     "id": "rumi",
     "name": "Bio-Aliment RumiBoost",
+    "name_fr": "Bio-Aliment RumiBoost",
     "price": 35.0,
-    "weight": "50kg"
+    "weight": "50kg",
+    "category": "feed",
+    "badge": "Organic",
+    "rating": 4.6,
+    "reviews": 42,
+    "image": "../assets/img/farmsense/cowimage.jpeg"
   },
   {
     "id": "porc",
     "name": "Bio-Aliment Porc Optimizer",
+    "name_fr": "Bio-Aliment Porc Optimizer",
     "price": 44.0,
-    "weight": "50kg"
+    "weight": "50kg",
+    "category": "feed",
+    "rating": 4.5,
+    "reviews": 31,
+    "image": "../assets/img/products/poultry-feed.jpg"
   },
   {
     "id": "agristack_small",
     "name": "AGRISTACK SMALL",
+    "name_fr": "AGRISTACK PETIT",
     "price": 0.0,
     "weight": "N/A",
+    "category": "solution",
     "type": "solution",
-    "cta": "buy"
+    "cta": "buy",
+    "badge": "Starter Kit",
+    "rating": 5.0,
+    "reviews": 12,
+    "image": "../assets/img/farmsense/graph.jpeg"
   },
   {
     "id": "agristack_medium",
     "name": "AGRISTACK MEDIUM",
+    "name_fr": "AGRISTACK MOYEN",
     "price": 0.0,
     "weight": "N/A",
+    "category": "solution",
     "type": "solution",
-    "cta": "quote"
+    "cta": "quote",
+    "rating": 4.9,
+    "reviews": 8,
+    "image": "../assets/img/farmsense/process.jpeg"
   },
   {
     "id": "agristack_large_pro",
     "name": "AGRISTACK LARGE / PRO",
+    "name_fr": "AGRISTACK LARGE / PRO",
     "price": 0.0,
     "weight": "N/A",
+    "category": "solution",
     "type": "solution",
-    "cta": "quote"
+    "cta": "quote",
+    "badge": "Enterprise",
+    "rating": 5.0,
+    "reviews": 5,
+    "image": "../assets/img/farmsense/icons.jpeg"
   }
 ]

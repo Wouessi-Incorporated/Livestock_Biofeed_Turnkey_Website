@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Cart | Livestock Biofeed</title>
+    <title>Your Cart | Livestock Biofeed</title>
     <link rel="icon" href="../assets/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/ecommerce.css" />
 </head>
@@ -13,36 +14,36 @@
 <body class="ecommerce-body">
     <header class="ecommerce-topbar">
         <div class="ecommerce-wrap ecommerce-nav">
-            <div class="ecommerce-brand">
-                <a href="index.html" class="ecommerce-pill">← <span data-i18n="crumb.shop">Shop</span></a>
-                <span class="ecommerce-pill" data-i18n="cart.title">Cart</span>
-            </div>
-            <div class="ecommerce-row">
-                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="../assets/img/logo.png" alt="Logo" style="height: 48px; width: auto;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1; color: var(--e-text);">
+                    <strong style="font-size: 14px; letter-spacing: 0.2px;">Livestock Biofeed</strong>
+                    <span style="font-size: 10px; color: var(--e-muted);">Feed Better</span>
+                </div>
+            </a>
+            <div class="ecommerce-nav-actions">
+                <a href="index.html" class="ecommerce-nav-btn">Continue Shopping</a>
+                <button class="ecommerce-nav-btn" id="langBtn">EN</button>
             </div>
         </div>
     </header>
 
-    <main class="ecommerce-wrap">
-        <h1 class="ecommerce-h1" data-i18n="cart.title">Cart</h1>
+    <main class="ecommerce-wrap" style="padding: 40px 24px;">
+        <h1 style="font-size: 32px; font-weight: 900; margin-bottom: 30px;">Shopping Cart</h1>
 
-        <div class="ecommerce-card">
+        <div class="ecommerce-hero-v2"
+            style="background: white; border-radius: var(--e-radius-lg); border: 1px solid var(--e-border); padding: 0; box-shadow: var(--e-shadow-md);">
             <div id="cartItems"></div>
-            <div class="ecommerce-p" style="background:rgba(0,0,0,.02); border-top:1px solid var(--lbb-border)">
-                <div class="ecommerce-row" style="justify-content:space-between; font-weight:900; font-size:20px">
-                    <span data-i18n="cart.total">Total</span>
-                    <span id="cartTotal">$0.00</span>
-                </div>
-                <div class="ecommerce-line"></div>
-                <div class="ecommerce-btnrow" style="justify-content:flex-end">
-                    <a class="ecommerce-cta secondary" href="index.html" data-i18n="cart.continue">Continue shopping</a>
-                    <a class="ecommerce-cta" href="checkout.html" data-i18n="cart.checkout">Checkout</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="ecommerce-footer">
-            <div data-i18n="cart.footer">Secure checkout.</div>
+            <div
+                style="background: #f8fafc; padding: 30px; border-top: 1px solid var(--e-border); display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <div style="color: var(--e-muted); font-size: 14px; font-weight: 600;">Estimated Total</div>
+                    <div style="font-size: 32px; font-weight: 900; color: var(--e-primary);" id="cartTotal">$0.00</div>
+                </div>
+                <a href="checkout.html" class="ecommerce-btn-lg ecommerce-btn-primary"
+                    style="text-decoration:none; display:inline-block; padding: 16px 40px;">Proceed to Checkout</a>
+            </div>
         </div>
     </main>
 

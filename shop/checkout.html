@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Checkout | Livestock Biofeed</title>
+    <title>Secure Checkout | Livestock Biofeed</title>
     <link rel="icon" href="../assets/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/ecommerce.css" />
 </head>
@@ -13,93 +14,113 @@
 <body class="ecommerce-body">
     <header class="ecommerce-topbar">
         <div class="ecommerce-wrap ecommerce-nav">
-            <div class="ecommerce-brand">
-                <a href="cart.html" class="ecommerce-pill">← <span data-i18n="cart.title">Cart</span></a>
-                <span class="ecommerce-pill" data-i18n="checkout.title">Checkout</span>
-            </div>
-            <div class="ecommerce-row">
-                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="../assets/img/logo.png" alt="Logo" style="height: 48px; width: auto;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1; color: var(--e-text);">
+                    <strong style="font-size: 14px; letter-spacing: 0.2px;">Livestock Biofeed</strong>
+                    <span style="font-size: 10px; color: var(--e-muted);">Feed Better</span>
+                </div>
+            </a>
+            <div class="ecommerce-nav-actions">
+                <span style="font-size: 13px; color: var(--e-muted); font-weight: 600;">Secure Checkout Process</span>
             </div>
         </div>
     </header>
 
-    <main class="ecommerce-wrap">
-        <h1 class="ecommerce-h1" data-i18n="checkout.title">Checkout</h1>
+    <main class="ecommerce-wrap" style="padding: 40px 24px;">
+        <div class="ecommerce-detail-container" style="grid-template-columns: 1fr 400px; gap: 40px;">
+            <div class="ecommerce-card" style="padding: 40px;">
+                <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 30px;">Shipping Information</h1>
+                <form id="checkoutForm" class="ecommerce-col" style="gap: 20px;">
+                    <div class="ecommerce-row" style="gap: 20px;">
+                        <div class="ecommerce-col" style="flex: 1;">
+                            <label class="ecommerce-label">Full Name</label>
+                            <input class="ecommerce-input" type="text" placeholder="John Doe" required
+                                style="border-radius: 8px; border: 1px solid var(--e-border); padding: 12px;" />
+                        </div>
+                        <div class="ecommerce-col" style="flex: 1;">
+                            <label class="ecommerce-label">Email Address</label>
+                            <input class="ecommerce-input" type="email" placeholder="john@example.com" required
+                                style="border-radius: 8px; border: 1px solid var(--e-border); padding: 12px;" />
+                        </div>
+                    </div>
 
-        <div class="ecommerce-two">
-            <section class="ecommerce-card">
-                <div class="ecommerce-p">
-                    <h2 class="ecommerce-h2" data-i18n="checkout.customer">Customer info</h2>
-                    <form id="checkoutForm" class="ecommerce-col">
-                        <div class="ecommerce-col">
-                            <label class="ecommerce-label" data-i18n="checkout.name">Full name</label>
-                            <input class="ecommerce-input" type="text" name="name" required />
-                        </div>
-                        <div class="ecommerce-col">
-                            <label class="ecommerce-label" data-i18n="checkout.country">Country</label>
-                            <select class="ecommerce-select" name="country" required>
-                                <option value="US">United States</option>
-                                <option value="CA">Canada</option>
-                                <option value="GB">United Kingdom</option>
-                                <option value="FR">France</option>
-                                <option value="DE">Germany</option>
-                                <option value="CM">Cameroon</option>
-                                <option value="NG">Nigeria</option>
-                                <option value="CI">Ivory Coast</option>
-                            </select>
-                        </div>
-                        <div class="ecommerce-col">
-                            <label class="ecommerce-label" data-i18n="checkout.address">Address</label>
-                            <input class="ecommerce-input" type="text" name="address" required />
-                        </div>
+                    <div class="ecommerce-col">
+                        <label class="ecommerce-label">Shipping Address</label>
+                        <input class="ecommerce-input" type="text" placeholder="123 Farm Lane" required
+                            style="border-radius: 8px; border: 1px solid var(--e-border); padding: 12px;" />
+                    </div>
 
-                        <div class="ecommerce-line"></div>
-
-                        <button class="ecommerce-cta" type="submit" id="payBtn">
-                            <span data-i18n="checkout.pay">Pay</span> <span id="btnTotal"></span>
-                        </button>
-                        <div class="ecommerce-row" style="margin-top:10px; justify-content:center">
-                            <small class="ecommerce-muted" data-i18n="pay.stripe">Pay by Card (Stripe)</small>
-                            <small class="ecommerce-muted" style="margin:0 10px">•</small>
-                            <small class="ecommerce-muted" data-i18n="pay.paypal">Pay with PayPal</small>
+                    <div class="ecommerce-row" style="gap: 20px;">
+                        <div class="ecommerce-col" style="flex: 1;">
+                            <label class="ecommerce-label">City</label>
+                            <input class="ecommerce-input" type="text" required
+                                style="border-radius: 8px; border: 1px solid var(--e-border); padding: 12px;" />
                         </div>
-                    </form>
-                </div>
-            </section>
+                        <div class="ecommerce-col" style="flex: 1;">
+                            <label class="ecommerce-label">Postal Code</label>
+                            <input class="ecommerce-input" type="text" required
+                                style="border-radius: 8px; border: 1px solid var(--e-border); padding: 12px;" />
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 15px;">Payment Method</h2>
+                        <div class="ecommerce-row" style="gap: 15px;">
+                            <div
+                                style="flex: 1; border: 2px solid var(--e-primary); border-radius: 12px; padding: 15px; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <div
+                                    style="width: 16px; height: 16px; border: 4px solid var(--e-primary); border-radius: 50%;">
+                                </div>
+                                <span style="font-weight: 700;">Secure Card Pay</span>
+                            </div>
+                            <div
+                                style="flex: 1; border: 1px solid var(--e-border); border-radius: 12px; padding: 15px; display: flex; align-items: center; gap: 10px; cursor: pointer; opacity: 0.6;">
+                                <div
+                                    style="width: 16px; height: 16px; border: 1px solid var(--e-border); border-radius: 50%;">
+                                </div>
+                                <span style="font-weight: 700;">PayPal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="ecommerce-btn-lg ecommerce-btn-primary" type="submit" id="payBtn"
+                        style="margin-top: 30px; width: 100%;">Complete Purchase <span id="btnTotal"></span></button>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <span style="font-size: 12px; color: var(--e-muted);">🛡️ Data encrypted with 256-bit SSL
+                            technology.</span>
+                    </div>
+                </form>
+            </div>
 
             <aside>
-                <div class="ecommerce-card">
-                    <div class="ecommerce-p">
-                        <h2 class="ecommerce-h2" data-i18n="checkout.summary">Order summary</h2>
-                        <div id="summaryItems"></div>
-                        <div class="ecommerce-line"></div>
-                        <div class="ecommerce-col" style="gap:10px">
-                            <div class="ecommerce-row" style="justify-content:space-between">
-                                <span data-i18n="checkout.subtotal">Subtotal</span>
-                                <span id="subtotal">...</span>
-                            </div>
-                            <div class="ecommerce-row" style="justify-content:space-between">
-                                <span data-i18n="checkout.shipping">Shipping</span>
-                                <span id="shipping">...</span>
-                            </div>
-                            <div class="ecommerce-row" style="justify-content:space-between">
-                                <span data-i18n="checkout.taxes">Taxes</span>
-                                <span id="taxes">...</span>
-                            </div>
-                            <div class="ecommerce-line"></div>
-                            <div class="ecommerce-row"
-                                style="justify-content:space-between; font-weight:900; font-size:18px">
-                                <span data-i18n="checkout.total">Total</span>
-                                <span id="total">...</span>
-                            </div>
+                <div class="ecommerce-card"
+                    style="padding: 30px; border: none; background: white; box-shadow: var(--e-shadow-md);">
+                    <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 20px;">Order Summary</h2>
+                    <div id="summaryItems"></div>
+                    <div class="ecommerce-line" style="margin: 20px 0;"></div>
+                    <div class="ecommerce-col" style="gap: 12px;">
+                        <div class="ecommerce-row" style="justify-content: space-between;">
+                            <span style="color: var(--e-muted); font-size: 14px;">Subtotal</span>
+                            <span id="subtotal" style="font-weight: 600;">$0.00</span>
+                        </div>
+                        <div class="ecommerce-row" style="justify-content: space-between;">
+                            <span style="color: var(--e-muted); font-size: 14px;">Shipping</span>
+                            <span id="shipping" style="font-weight: 600;">$0.00</span>
+                        </div>
+                        <div class="ecommerce-row" style="justify-content: space-between;">
+                            <span style="color: var(--e-muted); font-size: 14px;">Tax</span>
+                            <span id="taxes" style="font-weight: 600;">$0.00</span>
+                        </div>
+                        <div class="ecommerce-line" style="margin: 10px 0;"></div>
+                        <div class="ecommerce-row"
+                            style="justify-content: space-between; font-size: 20px; font-weight: 900;">
+                            <span>Total</span>
+                            <span id="total" style="color: var(--e-primary);">$0.00</span>
                         </div>
                     </div>
                 </div>
             </aside>
-        </div>
-
-        <div class="ecommerce-footer">
-            <div data-i18n="checkout.footer">Secure checkout. Proprietary funnel.</div>
         </div>
     </main>
 

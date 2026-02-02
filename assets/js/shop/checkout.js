@@ -3,9 +3,11 @@
     const products = await res.json();
     const rules = await (await fetch("../shop/data/commerce_rules.json")).json();
 
-    const cart = window.LBB_CART.getCart();
+    const cart = (window.LBB_CART) ? window.LBB_CART.getCart() : [];
     const box = document.getElementById("summaryItems");
     let subtotal = 0;
+
+    const lang = window.getCurrentLang ? window.getCurrentLang() : 'en';
 
     cart.forEach(item => {
         const p = products.find(x => x.id === item.id);
@@ -13,12 +15,14 @@
         const sub = p.price * item.qty;
         subtotal += sub;
 
+        const name = (lang === 'fr' && p.name_fr) ? p.name_fr : p.name;
+
         const div = document.createElement("div");
         div.className = "ecommerce-row";
         div.style.justifyContent = "space-between";
         div.style.marginBottom = "8px";
         div.innerHTML = `
-      <span style="font-size:14px">${p.name} (x${item.qty})</span>
+      <span style="font-size:14px">${name} (x${item.qty})</span>
       <span style="font-weight:700">$${sub.toFixed(2)}</span>
     `;
         box.appendChild(div);
@@ -42,7 +46,7 @@
         // Simulate payment redirect
         const btn = document.getElementById("payBtn");
         btn.disabled = true;
-        btn.textContent = "Redirecting to Secure Payment...";
+        btn.textContent = (lang === 'fr') ? "Redirection vers le paiement sécurisé..." : "Redirecting to Secure Payment...";
 
         setTimeout(() => {
             // In a real app, this would redirect to Stripe/PayPal

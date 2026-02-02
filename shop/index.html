@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Shop | Livestock Biofeed</title>
+    <title>Shop | Livestock Biofeed - Premium Agriculture Products</title>
     <link rel="icon" href="../assets/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/ecommerce.css" />
 </head>
@@ -13,41 +14,83 @@
 <body class="ecommerce-body">
     <header class="ecommerce-topbar">
         <div class="ecommerce-wrap ecommerce-nav">
-            <div class="ecommerce-brand">
-                <a href="../index.html" class="ecommerce-pill">← <span data-i18n="crumb.home">Home</span></a>
-                <span class="ecommerce-pill">LIVESTOCK BIOFEED</span>
+            <a href="../index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="../assets/img/logo.png" alt="Logo" style="height: 48px; width: auto;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1; color: var(--e-text);">
+                    <strong style="font-size: 14px; letter-spacing: 0.2px;">Livestock Biofeed</strong>
+                    <span style="font-size: 10px; color: var(--e-muted);">Feed Better</span>
+                </div>
+            </a>
+
+            <div class="ecommerce-search">
+                <input type="text" id="searchInput" placeholder="Search products, feed, solutions...">
             </div>
-            <div class="ecommerce-row">
-                <a class="ecommerce-pill" href="cart.html" id="cartLink">Cart (0)</a>
-                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+
+            <div class="ecommerce-nav-actions">
+                <a href="../index.html" class="ecommerce-nav-btn" data-i18n="crumb.home">Home</a>
+                <button class="ecommerce-nav-btn" id="langBtn">EN</button>
+                <a href="cart.html" class="ecommerce-nav-btn">
+                    <span>Cart</span>
+                    <span class="ecommerce-badge-count" id="cartCount">0</span>
+                </a>
             </div>
         </div>
     </header>
 
     <main class="ecommerce-wrap">
-        <section class="ecommerce-hero">
-            <div class="ecommerce-p">
-                <div class="ecommerce-tag" data-i18n="shop.subtitle">Boutique</div>
-                <h1 class="ecommerce-h1" data-i18n="shop.title">Shop Livestock Biofeed</h1>
-                <div class="ecommerce-muted" data-i18n="shop.desc">
-                    Premium biological feed and AGRISTACK solutions. Add products to cart and checkout with Stripe or
-                    PayPal.
+        <section class="ecommerce-hero-v2">
+            <div class="ecommerce-hero-card">
+                <div class="ecommerce-hero-content">
+                    <h1 data-i18n="shop.title">Elevate Your Farm's Potential</h1>
+                    <p data-i18n="shop.desc">Premium organic feed and integrated smart farming solutions delivered to
+                        your doorstep.</p>
+                    <a href="#products-start" class="ecommerce-btn-lg ecommerce-btn-primary"
+                        style="text-decoration:none">Shop Now</a>
+                </div>
+                <div class="ecommerce-hero-img-ph"
+                    style="background: rgba(255,255,255,0.1); border-radius: 20px; height: 300px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 24px;">
+                    LIVESTOCK BIOFEED
                 </div>
             </div>
         </section>
 
-        <div class="ecommerce-h2" style="margin-top:24px" data-i18n="shop.biofeed">BioFeed products</div>
-        <section class="ecommerce-grid" id="biofeedGrid"></section>
+        <div id="products-start"></div>
 
-        <div class="ecommerce-h2" style="margin-top:24px" data-i18n="shop.agristack">AGRI-STACK™ solutions</div>
-        <section class="ecommerce-grid" id="agriGrid"></section>
-
-        <div class="ecommerce-footer">
-            <div data-i18n="shop.footer">Secure checkout. Proprietary funnel.</div>
+        <div class="ecommerce-filter-bar">
+            <div class="ecommerce-filter-group" id="filterContainer">
+                <button class="ecommerce-filter-chip active" data-filter="all">All Products</button>
+                <button class="ecommerce-filter-chip" data-filter="feed" data-i18n="shop.biofeed">BioFeed</button>
+                <button class="ecommerce-filter-chip" data-filter="solution"
+                    data-i18n="shop.agristack">AgriStack</button>
+            </div>
+            <div class="ecommerce-muted" style="font-size: 14px;">
+                Showing <span id="productResultCount">0</span> items
+            </div>
         </div>
+
+        <div id="feedSection">
+            <h2 class="ecommerce-h2" style="margin-bottom: 24px; font-size: 24px;">BioFeed Essentials</h2>
+            <div class="ecommerce-standard-grid" id="biofeedGrid"></div>
+        </div>
+
+        <div id="agriSection">
+            <h2 class="ecommerce-h2" style="margin-bottom: 24px; font-size: 24px;">AgriStack™ Solutions</h2>
+            <div class="ecommerce-standard-grid" id="agriGrid"></div>
+        </div>
+
+        <footer class="ecommerce-footer" style="padding: 60px 0; border-top: 1px solid var(--e-border);">
+            <div class="ecommerce-logo" style="margin-bottom: 20px; display: block;">LIVESTOCK BIOFEED</div>
+            <div class="ecommerce-muted" data-i18n="shop.footer">Secure checkout. Proprietary funnel technology.</div>
+            <div style="margin-top: 20px;">
+                <a href="../privacy-policy.html" class="ecommerce-nav-btn"
+                    style="display:inline-block; margin-right: 20px;">Privacy Policy</a>
+                <a href="../terms-of-service.html" class="ecommerce-nav-btn" style="display:inline-block;">Terms of
+                    Service</a>
+            </div>
+        </footer>
     </main>
 
-    <div class="ecommerce-toast" id="toast"></div>
+    <div class="ecommerce-toast-v2" id="toast"></div>
 
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/i18n.js"></script>

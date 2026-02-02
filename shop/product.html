@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Product Details | Livestock Biofeed</title>
     <link rel="icon" href="../assets/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/ecommerce.css" />
 </head>
@@ -13,56 +14,71 @@
 <body class="ecommerce-body">
     <header class="ecommerce-topbar">
         <div class="ecommerce-wrap ecommerce-nav">
-            <div class="ecommerce-brand">
-                <a href="index.html" class="ecommerce-pill">← <span data-i18n="crumb.shop">Shop</span></a>
-                <span class="ecommerce-pill" id="crumbName">...</span>
-            </div>
-            <div class="ecommerce-row">
-                <a class="ecommerce-pill" href="cart.html" id="cartLink">Cart (0)</a>
-                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="../assets/img/logo.png" alt="Logo" style="height: 48px; width: auto;">
+                <div style="display: flex; flex-direction: column; line-height: 1.1; color: var(--e-text);">
+                    <strong style="font-size: 14px; letter-spacing: 0.2px;">Livestock Biofeed</strong>
+                    <span style="font-size: 10px; color: var(--e-muted);">Feed Better</span>
+                </div>
+            </a>
+            <div class="ecommerce-nav-actions">
+                <a href="index.html" class="ecommerce-nav-btn">Back to Shop</a>
+                <button class="ecommerce-nav-btn" id="langBtn">EN</button>
+                <a href="cart.html" class="ecommerce-nav-btn">
+                    <span>Cart</span>
+                    <span class="ecommerce-badge-count" id="cartCount">0</span>
+                </a>
             </div>
         </div>
     </header>
 
     <main class="ecommerce-wrap">
-        <div class="ecommerce-two" style="margin-top:20px">
-            <section class="ecommerce-card">
-                <div class="ecommerce-imgph"></div>
-                <div class="ecommerce-p">
-                    <div class="ecommerce-tag" id="productType">BIOFEED</div>
-                    <h1 class="ecommerce-h1" id="productName" style="margin:10px 0">Product Name</h1>
-                    <div class="ecommerce-muted" id="productWeight">50kg</div>
-                    <div class="ecommerce-line"></div>
-                    <div id="productDesc" style="margin-bottom:14px; line-height:1.5">...</div>
-                    <div id="benefits" style="margin-bottom:18px; font-size:14px"></div>
-                    <div class="ecommerce-price" id="productPrice" style="font-size:28px; margin-bottom:18px"></div>
+        <div class="ecommerce-detail-container">
+            <div class="ecommerce-detail-gallery">
+                <div class="ecommerce-main-img" id="productMainImg"></div>
+            </div>
 
-                    <div class="ecommerce-btnrow">
-                        <button class="ecommerce-cta" id="addCart" data-i18n="cta.add_to_cart">Add to cart</button>
-                        <button class="ecommerce-cta secondary" id="buyNow" data-i18n="cta.buy_now">Buy now</button>
-                    </div>
+            <div class="ecommerce-detail-info">
+                <div class="ecommerce-tag" id="productBadge" style="margin-bottom: 20px; display: none;"></div>
+                <div class="ecommerce-product-cat" id="productCat">CATEGORY</div>
+                <h1 id="productName">Product Name</h1>
+
+                <div class="ecommerce-product-rating" style="margin: 15px 0;">
+                    <span id="starRating"></span>
+                    <span id="reviewCount" style="color: var(--e-muted); font-size: 14px;">(0 reviews)</span>
                 </div>
-            </section>
 
-            <aside>
-                <div class="ecommerce-h2" data-i18n="product.cross">Optimize with AGRISTACK™</div>
-                <div class="ecommerce-col" id="agriCards"></div>
+                <div class="ecommerce-detail-price" id="productPrice">$0.00</div>
 
-                <div class="ecommerce-card" style="margin-top:20px">
-                    <div class="ecommerce-p">
-                        <div class="ecommerce-h2" data-i18n="product.details">Details</div>
-                        <div class="ecommerce-muted" id="details" style="font-size:13px">...</div>
-                    </div>
+                <p id="productDesc" style="color: var(--e-muted); margin-bottom: 30px; font-size: 16px;"></p>
+
+                <div class="ecommerce-h2" style="font-size: 18px;">Selection</div>
+                <div class="ecommerce-line" style="margin: 10px 0 20px;"></div>
+
+                <div class="ecommerce-qty-selector">
+                    <button class="ecommerce-qty-btn" id="qtyMinus">-</button>
+                    <input type="number" class="ecommerce-qty-input" id="qtyInput" value="1" min="1">
+                    <button class="ecommerce-qty-btn" id="qtyPlus">+</button>
                 </div>
-            </aside>
+
+                <div class="ecommerce-buy-actions">
+                    <button class="ecommerce-btn-lg ecommerce-btn-primary" id="addCart">Add to Cart</button>
+                    <button class="ecommerce-btn-lg ecommerce-btn-secondary" id="buyNow">Buy It Now</button>
+                </div>
+
+                <div class="ecommerce-card" style="border: none; background: #f1f5f9; padding: 20px;">
+                    <div id="benefits"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="ecommerce-footer" style="margin-top:40px">
-            <div data-i18n="product.footer">Secure checkout. Proprietary funnel.</div>
-        </div>
+        <section style="margin: 80px 0;">
+            <h2 class="ecommerce-h2" style="font-size: 28px; margin-bottom: 30px;">Related Products</h2>
+            <div class="ecommerce-standard-grid" id="agriCards"></div>
+        </section>
     </main>
 
-    <div class="ecommerce-toast" id="toast"></div>
+    <div class="ecommerce-toast-v2" id="toast"></div>
 
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/i18n.js"></script>
