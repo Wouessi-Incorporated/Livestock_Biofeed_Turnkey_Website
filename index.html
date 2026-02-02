@@ -1,446 +1,1102 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Livestock Biofeed Inc. — Feed Better</title>
+        <meta
+            name="description"
+            content="Organic, non-GMO livestock feed based on local resources, designed to match or outperform industrial feeds with batch traceability and audit-ready documentation."
+        />
+        <link rel="icon" href="assets/img/logo.png" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/i18n.js" defer></script>
+        <script src="assets/js/main.js" defer></script>
+    </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Livestock Biofeed Inc. — Feed Better</title>
-  <meta name="description"
-    content="Organic, non-GMO livestock feed based on local resources, designed to match or outperform industrial feeds with batch traceability and audit-ready documentation." />
-  <link rel="icon" href="assets/img/logo.png" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/i18n.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-</head>
+    <body>
+        <header class="nav">
+            <div class="container">
+                <div class="nav-inner">
+                    <div class="nav-left">
+                        <a class="brand" href="#top">
+                            <img
+                                src="assets/img/logo.png"
+                                alt="Livestock Biofeed Inc. logo"
+                            />
+                            <div class="name">
+                                <strong>Livestock Biofeed Inc.</strong>
+                                <span data-i18n="kicker_a">100% ORGANIC</span>
+                            </div>
+                        </a>
+                    </div>
 
-<body>
+                    <div class="nav-center">
+                        <nav class="nav-links" aria-label="Primary">
+                            <a href="#features" data-i18n="nav_features"
+                                >Features</a
+                            >
+                            <a href="#products" data-i18n="nav_products"
+                                >Products</a
+                            >
+                            <a href="#performance" data-i18n="nav_performance"
+                                >Performance</a
+                            >
+                            <a href="#traceability" data-i18n="nav_traceability"
+                                >Traceability</a
+                            >
+                            <a href="#video" data-i18n="nav_video">Video</a>
+                            <a href="#contact" data-i18n="nav_contact"
+                                >Contact</a
+                            >
+                        </nav>
+                    </div>
 
-  <header class="nav">
-    <div class="container">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <a class="brand" href="#top">
-            <img src="assets/img/logo.png" alt="Livestock Biofeed Inc. logo" />
-            <div class="name">
-              <strong>Livestock Biofeed Inc.</strong>
-              <span data-i18n="kicker_a">100% ORGANIC</span>
+                    <div class="nav-right">
+                        <div class="actions">
+                            <a
+                                class="btn btn-ghost mobile-hidden"
+                                id="catalogBtn"
+                                href="#"
+                                data-i18n="cta_download"
+                                >Download Catalog</a
+                            >
+                            <a
+                                class="btn btn-primary"
+                                href="#contact"
+                                data-i18n="cta_quote"
+                                >Request a Quote</a
+                            >
+                            <button
+                                class="lang mobile-hidden"
+                                id="langBtn"
+                                aria-label="Toggle language"
+                            >
+                                EN
+                            </button>
+                        </div>
+                        <button
+                            class="menu-btn"
+                            id="menuBtn"
+                            aria-label="Open menu"
+                            aria-expanded="false"
+                        >
+                            <span class="hamburger">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <a href="#features" data-i18n="nav_features">Features</a>
+                    <a href="#products" data-i18n="nav_products">Products</a>
+                    <a href="#performance" data-i18n="nav_performance"
+                        >Performance</a
+                    >
+                    <a href="#traceability" data-i18n="nav_traceability"
+                        >Traceability</a
+                    >
+                    <a href="#video" data-i18n="nav_video">Video</a>
+                    <a href="#contact" data-i18n="nav_contact">Contact</a>
+                    <a
+                        href="#"
+                        class="btn btn-ghost mobile-only"
+                        id="mobileCatalogBtn"
+                        data-i18n="cta_download"
+                        >Download Catalog</a
+                    >
+                    <div class="mobile-lang">
+                        <button
+                            class="lang"
+                            id="mobileLangBtn"
+                            aria-label="Toggle language"
+                        >
+                            EN
+                        </button>
+                    </div>
+                </div>
             </div>
-          </a>
-        </div>
+        </header>
 
-        <div class="nav-center">
-          <nav class="nav-links" aria-label="Primary">
-            <a href="#features" data-i18n="nav_features">Features</a>
-            <a href="#products" data-i18n="nav_products">Products</a>
-            <a href="#performance" data-i18n="nav_performance">Performance</a>
-            <a href="#traceability" data-i18n="nav_traceability">Traceability</a>
-            <a href="#video" data-i18n="nav_video">Video</a>
-            <a href="#contact" data-i18n="nav_contact">Contact</a>
-          </nav>
-        </div>
+        <main id="top">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div>
+                            <div class="kicker">
+                                <b data-i18n="kicker_a">100% ORGANIC</b>
+                                <span>•</span>
+                                <span data-i18n="kicker_b">Non‑GMO</span>
+                                <span>•</span>
+                                <span class="badge" data-i18n="meta_track"
+                                    >Traceable</span
+                                >
+                            </div>
 
-        <div class="nav-right">
-          <div class="actions">
-            <a class="btn btn-ghost mobile-hidden" id="catalogBtn" href="#" data-i18n="cta_download">Download
-              Catalog</a>
-            <a class="btn btn-primary" href="#contact" data-i18n="cta_quote">Request a Quote</a>
-            <button class="lang mobile-hidden" id="langBtn" aria-label="Toggle language">EN</button>
-          </div>
-          <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-            <span class="hamburger">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-            </span>
-          </button>
-        </div>
-      </div>
+                            <h1 data-i18n="hero_title">Feed Better</h1>
+                            <p data-i18n="hero_sub">
+                                Organic, non-GMO feed built for predictable
+                                outcomes — with traceability designed for farms,
+                                distributors, and partners.
+                            </p>
 
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" data-i18n="nav_features">Features</a>
-        <a href="#products" data-i18n="nav_products">Products</a>
-        <a href="#performance" data-i18n="nav_performance">Performance</a>
-        <a href="#traceability" data-i18n="nav_traceability">Traceability</a>
-        <a href="#video" data-i18n="nav_video">Video</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
-        <a href="#" class="btn btn-ghost mobile-only" id="mobileCatalogBtn" data-i18n="cta_download">Download
-          Catalog</a>
-        <div class="mobile-lang">
-          <button class="lang" id="mobileLangBtn" aria-label="Toggle language">EN</button>
-        </div>
-      </div>
-    </div>
-  </header>
+                            <div class="actions" style="margin-top: 14px">
+                                <a
+                                    class="btn btn-primary"
+                                    href="#products"
+                                    data-i18n="hero_btn1"
+                                    >Explore products</a
+                                >
+                                <a
+                                    class="btn btn-ghost"
+                                    href="#contact"
+                                    data-i18n="hero_btn2"
+                                    >Talk to us</a
+                                >
+                            </div>
+                        </div>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="kicker">
-              <b data-i18n="kicker_a">100% ORGANIC</b>
-              <span>•</span>
-              <span data-i18n="kicker_b">Non‑GMO</span>
-              <span>•</span>
-              <span class="badge" data-i18n="meta_track">Traceable</span>
-            </div>
+                        <div class="hero-image-section">
+                            <img
+                                src="assets/img/farmsense/cowimage.jpeg"
+                                alt="Smart farming technology with mobile app monitoring livestock"
+                                class="hero-tech-image"
+                            />
+                            <div class="hero-cards">
+                                <div class="card">
+                                    <h3 data-i18n="card1_t">
+                                        Fully Biological
+                                    </h3>
+                                    <p data-i18n="card1_p">
+                                        Plant‑based and natural protein inputs
+                                        with strict ingredient rules and clean
+                                        processing standards.
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <h3 data-i18n="card2_t">Non‑GMO Promise</h3>
+                                    <p data-i18n="card2_p">
+                                        No genetically modified ingredients.
+                                        Clear documentation and batch-linked
+                                        records.
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <h3 data-i18n="card3_t">
+                                        Traceability Built-In
+                                    </h3>
+                                    <p data-i18n="card3_p">
+                                        Every production batch can be tracked —
+                                        inputs, processing, QC checks, and
+                                        delivery route.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <h1 data-i18n="hero_title">Feed Better</h1>
-            <p data-i18n="hero_sub">Organic, non-GMO feed built for predictable outcomes — with traceability designed
-              for farms, distributors, and partners.</p>
+            <section class="section" id="features">
+                <div class="container">
+                    <h2 data-i18n="sec_features_t">
+                        What makes Livestock Biofeed different
+                    </h2>
+                    <p class="sub" data-i18n="sec_features_sub">
+                        A clean-feed system that scales: consistent formulation,
+                        strict inputs, transparent records, and export-ready
+                        documentation.
+                    </p>
 
-            <div class="actions" style="margin-top:14px;">
-              <a class="btn btn-primary" href="#products" data-i18n="hero_btn1">Explore products</a>
-              <a class="btn btn-ghost" href="#contact" data-i18n="hero_btn2">Talk to us</a>
-            </div>
-          </div>
+                    <div class="grid-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#2d5a3d"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M2 22h20" />
+                                    <path d="M12 2v20" />
+                                    <path d="M12 2l-4 4" />
+                                    <path d="M12 2l4 4" />
+                                    <path d="M12 8l-3 3" />
+                                    <path d="M12 8l3 3" />
+                                    <path d="M12 14l-2 2" />
+                                    <path d="M12 14l2 2" />
+                                </svg>
+                            </div>
+                            <h3 data-i18n="f1_t">Local-resource efficiency</h3>
+                            <p data-i18n="f1_p">
+                                We prioritize local sourcing and short supply
+                                chains to reduce volatility and keep pricing
+                                stable for farms.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#2d5a3d"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M4 12c0-4 3-8 8-8s8 4 8 8-3 8-8 8"
+                                    />
+                                    <path
+                                        d="M8 12c0-2 1.5-4 4-4s4 2 4 4-1.5 4-4 4"
+                                    />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                            </div>
+                            <h3 data-i18n="f2_t">Enhanced digestibility</h3>
+                            <p data-i18n="f2_p">
+                                Balanced protein/energy, minerals and vitamins.
+                                Designed to help farms stabilize outcomes,
+                                reduce waste, and improve consistency.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="#2d5a3d"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                                    />
+                                    <rect
+                                        x="8"
+                                        y="2"
+                                        width="8"
+                                        height="4"
+                                        rx="1"
+                                        ry="1"
+                                    />
+                                    <path d="M9 14l2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3 data-i18n="f3_t">Institution ready</h3>
+                            <p data-i18n="f3_p">
+                                Batch logs, moisture checks, mixing records,
+                                packaging seals and storage standards — ready
+                                for audits and partners.
+                            </p>
+                        </div>
+                    </div>
 
-          <div class="hero-cards">
-            <div class="card">
-              <h3 data-i18n="card1_t">Fully Biological</h3>
-              <p data-i18n="card1_p">Plant‑based and natural protein inputs with strict ingredient rules and clean
-                processing standards.</p>
-            </div>
-            <div class="card">
-              <h3 data-i18n="card2_t">Non‑GMO Promise</h3>
-              <p data-i18n="card2_p">No genetically modified ingredients. Clear documentation and batch-linked records.
-              </p>
-            </div>
-            <div class="card">
-              <h3 data-i18n="card3_t">Traceability Built-In</h3>
-              <p data-i18n="card3_p">Every production batch can be tracked — inputs, processing, QC checks, and delivery
-                route.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div
+                        class="pills"
+                        id="featurePills"
+                        aria-label="Key attributes"
+                    ></div>
+                </div>
+            </section>
 
-    <section class="section" id="features">
-      <div class="container">
-        <h2 data-i18n="sec_features_t">What makes Livestock Biofeed different</h2>
-        <p class="sub" data-i18n="sec_features_sub">A clean-feed system that scales: consistent formulation, strict
-          inputs, transparent records, and export-ready documentation.</p>
+            <section class="section" id="products">
+                <div class="container">
+                    <h2 data-i18n="sec_products_t">Products</h2>
+                    <p class="sub" data-i18n="sec_products_sub">
+                        Core product lines — available in starter, grower and
+                        finisher variants. Custom formulation available for
+                        large operations.
+                    </p>
 
-        <div class="grid-3">
-          <div class="card">
-            <h3 data-i18n="f1_t">Ingredient discipline</h3>
-            <p data-i18n="f1_p">We define allowed inputs and enforce them at procurement: biological sources, no GMO
-              inputs, and clear supplier documentation.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="f2_t">Performance-focused formulation</h3>
-            <p data-i18n="f2_p">Balanced protein/energy, minerals and vitamins. Designed to help farms stabilize
-              outcomes, reduce waste, and improve consistency.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="f3_t">Quality control you can show</h3>
-            <p data-i18n="f3_p">Batch logs, moisture checks, mixing records, packaging seals and storage standards —
-              ready for audits and partners.</p>
-          </div>
-        </div>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-image-placeholder"></div>
+                            <div class="product-content">
+                                <div class="meta">
+                                    <span class="pill" data-i18n="meta_bio"
+                                        >Biological</span
+                                    >
+                                    <span class="pill" data-i18n="meta_nonGMO"
+                                        >Non‑GMO</span
+                                    >
+                                    <span class="pill" data-i18n="meta_track"
+                                        >Traceable</span
+                                    >
+                                </div>
+                                <h3 data-i18n="p1_name">Poultry Layer+</h3>
+                                <p data-i18n="p1_desc">
+                                    A clean, biological layer feed designed to
+                                    support steady laying rhythm, shell quality
+                                    and yolk consistency without GMO inputs.
+                                </p>
+                                <ul class="list" id="p1_points"></ul>
+                            </div>
+                        </div>
 
-        <div class="pills" id="featurePills" aria-label="Key attributes"></div>
-      </div>
-    </section>
+                        <div class="product">
+                            <div class="product-image-placeholder"></div>
+                            <div class="product-content">
+                                <div class="meta">
+                                    <span class="pill" data-i18n="meta_bio"
+                                        >Biological</span
+                                    >
+                                    <span class="pill" data-i18n="meta_nonGMO"
+                                        >Non‑GMO</span
+                                    >
+                                    <span class="pill" data-i18n="meta_track"
+                                        >Traceable</span
+                                    >
+                                </div>
+                                <h3 data-i18n="p2_name">
+                                    Poultry Broiler Grow
+                                </h3>
+                                <p data-i18n="p2_desc">
+                                    High-efficiency biological feed for broilers
+                                    focusing on uniform growth and stable feed
+                                    conversion under practical farm conditions.
+                                </p>
+                                <ul class="list" id="p2_points"></ul>
+                            </div>
+                        </div>
 
-    <section class="section" id="products">
-      <div class="container">
-        <h2 data-i18n="sec_products_t">Products</h2>
-        <p class="sub" data-i18n="sec_products_sub">Core product lines — available in starter, grower and finisher
-          variants. Custom formulation available for large operations.</p>
+                        <div class="product">
+                            <div class="product-image-placeholder"></div>
+                            <div class="product-content">
+                                <div class="meta">
+                                    <span class="pill" data-i18n="meta_bio"
+                                        >Biological</span
+                                    >
+                                    <span class="pill" data-i18n="meta_nonGMO"
+                                        >Non‑GMO</span
+                                    >
+                                    <span class="pill" data-i18n="meta_track"
+                                        >Traceable</span
+                                    >
+                                </div>
+                                <h3 data-i18n="p3_name">Tilapia Max</h3>
+                                <p data-i18n="p3_desc">
+                                    Plant-forward biological fish feed tuned for
+                                    tilapia growth, pellet stability, and
+                                    reliable daily intake patterns.
+                                </p>
+                                <ul class="list" id="p3_points"></ul>
+                            </div>
+                        </div>
 
-        <div class="products">
-          <div class="product">
-            <div class="meta">
-              <span class="pill" data-i18n="meta_bio">Biological</span>
-              <span class="pill" data-i18n="meta_nonGMO">Non‑GMO</span>
-              <span class="pill" data-i18n="meta_track">Traceable</span>
-            </div>
-            <h3 data-i18n="p1_name">Poultry Layer+</h3>
-            <p data-i18n="p1_desc">A clean, biological layer feed designed to support steady laying rhythm, shell
-              quality and yolk consistency without GMO inputs.</p>
-            <ul class="list" id="p1_points"></ul>
-          </div>
+                        <div class="product">
+                            <div class="product-image-placeholder"></div>
+                            <div class="product-content">
+                                <div class="meta">
+                                    <span class="pill" data-i18n="meta_bio"
+                                        >Biological</span
+                                    >
+                                    <span class="pill" data-i18n="meta_nonGMO"
+                                        >Non‑GMO</span
+                                    >
+                                    <span class="pill" data-i18n="meta_custom"
+                                        >Custom available</span
+                                    >
+                                </div>
+                                <h3 data-i18n="p4_name">Multi-Species Base</h3>
+                                <p data-i18n="p4_desc">
+                                    A flexible biological base mix for
+                                    multi-animal systems. Ideal for farms that
+                                    need a reliable baseline with custom
+                                    finishing options.
+                                </p>
+                                <ul class="list" id="p4_points"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <div class="product">
-            <div class="meta">
-              <span class="pill" data-i18n="meta_bio">Biological</span>
-              <span class="pill" data-i18n="meta_nonGMO">Non‑GMO</span>
-              <span class="pill" data-i18n="meta_track">Traceable</span>
-            </div>
-            <h3 data-i18n="p2_name">Poultry Broiler Grow</h3>
-            <p data-i18n="p2_desc">High-efficiency biological feed for broilers focusing on uniform growth and stable
-              feed conversion under practical farm conditions.</p>
-            <ul class="list" id="p2_points"></ul>
-          </div>
+            <section class="section" id="comparison">
+                <div class="container">
+                    <h2 data-i18n="sec_comp_t">
+                        BIO-FEED™ vs Industrial Feeds
+                    </h2>
+                    <p class="sub" data-i18n="sec_comp_sub">
+                        Real numbers. Real farms. Real results.
+                    </p>
 
-          <div class="product">
-            <div class="meta">
-              <span class="pill" data-i18n="meta_bio">Biological</span>
-              <span class="pill" data-i18n="meta_nonGMO">Non‑GMO</span>
-              <span class="pill" data-i18n="meta_track">Traceable</span>
-            </div>
-            <h3 data-i18n="p3_name">Tilapia Max</h3>
-            <p data-i18n="p3_desc">Plant-forward biological fish feed tuned for tilapia growth, pellet stability, and
-              reliable daily intake patterns.</p>
-            <ul class="list" id="p3_points"></ul>
-          </div>
+                    <div
+                        class="grid-2"
+                        style="align-items: center; margin-top: 2rem; gap: 2rem"
+                    >
+                        <div>
+                            <h3 data-i18n="comp_card_t">
+                                Why Farmers Switch to Bio-Feed
+                            </h3>
+                            <ul
+                                class="list"
+                                id="compList"
+                                style="padding-left: 1.5rem"
+                            >
+                                <li>20–40% lower feed cost</li>
+                                <li>Lower mortality</li>
+                                <li>Better digestibility</li>
+                                <li>Stable, repeatable results</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img
+                                src="assets/img/logo.png"
+                                alt="Bio-Feed Logo"
+                                style="
+                                    width: 100%;
+                                    border-radius: 16px;
+                                    object-fit: contain;
+                                    max-height: 300px;
+                                "
+                            />
+                        </div>
+                    </div>
 
-          <div class="product">
-            <div class="meta">
-              <span class="pill" data-i18n="meta_bio">Biological</span>
-              <span class="pill" data-i18n="meta_nonGMO">Non‑GMO</span>
-              <span class="pill" data-i18n="meta_custom">Custom available</span>
-            </div>
-            <h3 data-i18n="p4_name">Multi-Species Base</h3>
-            <p data-i18n="p4_desc">A flexible biological base mix for multi-animal systems. Ideal for farms that need a
-              reliable baseline with custom finishing options.</p>
-            <ul class="list" id="p4_points"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div
+                        class="card"
+                        style="
+                            margin-top: 2rem;
+                            background: #1f5e3b;
+                            color: white;
+                            padding: 2rem;
+                            text-align: center;
+                            border-radius: 16px;
+                        "
+                    >
+                        <h3
+                            style="color: white; margin-top: 0"
+                            data-i18n="sec_pdf_t"
+                        >
+                            See the Full Comparison
+                        </h3>
+                        <p data-i18n="sec_pdf_p">
+                            Download the comprehensive performance report with
+                            real farm numbers and ROI analysis.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                gap: 1rem;
+                                justify-content: center;
+                                flex-wrap: wrap;
+                                margin-top: 1.5rem;
+                            "
+                        >
+                            <a
+                                href="performance-report.html"
+                                class="btn"
+                                id="pdfBtn"
+                                data-i18n="sec_pdf_btn"
+                                style="
+                                    background: #2c5aa0;
+                                    color: white;
+                                    border: 0;
+                                    padding: 12px 24px;
+                                    text-decoration: none;
+                                    border-radius: 8px;
+                                "
+                                >Full Performance Report</a
+                            >
+                            <a
+                                href="assets/img/Bio-Feed_Quantified_Comparison.pdf"
+                                download="Bio-Feed_Quantified_Comparison.pdf"
+                                class="btn"
+                                style="
+                                    background: #7a5a2e;
+                                    color: white;
+                                    border: 0;
+                                    padding: 12px 24px;
+                                    text-decoration: none;
+                                    border-radius: 8px;
+                                "
+                                >Quick PDF Summary</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="section" id="performance">
+                <div class="container">
+                    <h2 data-i18n="sec_perf_t">
+                        Performance vs Industry Standard
+                    </h2>
+                    <p class="sub" data-i18n="sec_perf_sub">
+                        We evaluate performance through observable outcomes...
+                    </p>
 
-    <section class="section" id="comparison">
-      <div class="container">
-        <h2 data-i18n="sec_comp_t">BIO-FEED™ vs Industrial Feeds</h2>
-        <p class="sub" data-i18n="sec_comp_sub">Real numbers. Real farms. Real results.</p>
+                    <div class="comparison-container">
+                        <div class="comparison-row">
+                            <span class="comparison-label">Cost Stability</span>
+                            <div class="bar-group">
+                                <div
+                                    class="comparison-bar industry"
+                                    style="width: 40%"
+                                >
+                                    Industry
+                                </div>
+                                <div
+                                    class="comparison-bar biofeed"
+                                    style="width: 85%"
+                                >
+                                    Biofeed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label"
+                                >Feed Conversion</span
+                            >
+                            <div class="bar-group">
+                                <div
+                                    class="comparison-bar industry"
+                                    style="width: 55%"
+                                >
+                                    Industry
+                                </div>
+                                <div
+                                    class="comparison-bar biofeed"
+                                    style="width: 80%"
+                                >
+                                    Biofeed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label"
+                                >Mortality Reduction</span
+                            >
+                            <div class="bar-group">
+                                <div
+                                    class="comparison-bar industry"
+                                    style="width: 35%"
+                                >
+                                    Industry
+                                </div>
+                                <div
+                                    class="comparison-bar biofeed"
+                                    style="width: 75%"
+                                >
+                                    Biofeed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Digestibility</span>
+                            <div class="bar-group">
+                                <div
+                                    class="comparison-bar industry"
+                                    style="width: 50%"
+                                >
+                                    Industry
+                                </div>
+                                <div
+                                    class="comparison-bar biofeed"
+                                    style="width: 90%"
+                                >
+                                    Biofeed
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-label">Traceability</span>
+                            <div class="bar-group">
+                                <div
+                                    class="comparison-bar industry"
+                                    style="width: 25%"
+                                >
+                                    Industry
+                                </div>
+                                <div
+                                    class="comparison-bar biofeed"
+                                    style="width: 95%"
+                                >
+                                    Biofeed
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="grid-2" style="align-items: center; margin-top: 2rem; gap: 2rem;">
-          <div>
-            <h3 data-i18n="comp_card_t">Why Farmers Switch to Bio-Feed</h3>
-            <ul class="list" id="compList" style="padding-left: 1.5rem;">
-              <li>20–40% lower feed cost</li>
-              <li>Lower mortality</li>
-              <li>Better digestibility</li>
-              <li>Stable, repeatable results</li>
-            </ul>
-          </div>
-          <div>
-            <img src="assets/img/logo.png" alt="Bio-Feed Logo"
-              style="width: 100%; border-radius: 16px; object-fit: contain; max-height: 300px;" />
-          </div>
-        </div>
+            <section class="section" id="data-process">
+                <div class="container">
+                    <h2>From Sensor to Action</h2>
+                    <p class="sub">
+                        Our 5-step process transforms raw sensor data into
+                        actionable insights that improve farm productivity and
+                        animal welfare.
+                    </p>
 
-        <div class="card"
-          style="margin-top: 2rem; background:#1F5E3B; color:white; padding: 2rem; text-align:center; border-radius: 16px;">
-          <h3 style="color: white; margin-top: 0;" data-i18n="sec_pdf_t">See the Full Comparison</h3>
-          <p data-i18n="sec_pdf_p">Download the 2-page PDF with real farm numbers.</p>
-          <a href="assets/img/Bio-Feed_Quantified_Comparison.pdf" download="Bio-Feed_Quantified_Comparison.pdf"
-            class="btn" id="pdfBtn" data-i18n="sec_pdf_btn"
-            style="background:#7A5A2E; color:white; border:0; padding: 12px 24px; text-decoration: none; border-radius: 8px;">Download
-            PDF</a>
-        </div>
-      </div>
-    </section>
+                    <div class="process-flow">
+                        <img
+                            src="assets/img/farmsense/process.jpeg"
+                            alt="5-step data processing workflow from collection to storage"
+                            class="process-diagram"
+                        />
+                    </div>
 
+                    <div class="grid-2" style="margin-top: 2rem">
+                        <div class="card">
+                            <h3>Real-Time Monitoring</h3>
+                            <p>
+                                Continuous data collection from multiple sensors
+                                provides 24/7 visibility into farm conditions,
+                                animal health, and environmental factors.
+                            </p>
+                            <div class="pills">
+                                <span class="pill">Temperature</span>
+                                <span class="pill">Humidity</span>
+                                <span class="pill">Air Quality</span>
+                                <span class="pill">Animal Activity</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Predictive Analytics</h3>
+                            <p>
+                                Machine learning algorithms analyze historical
+                                patterns to predict health issues, optimize
+                                feeding schedules, and prevent problems before
+                                they occur.
+                            </p>
+                            <div class="pills">
+                                <span class="pill">Health Prediction</span>
+                                <span class="pill">Feed Optimization</span>
+                                <span class="pill">Alert Systems</span>
+                                <span class="pill">Trend Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="section" id="performance">
-      <div class="container">
-        <h2 data-i18n="sec_perf_t">Performance vs Industry Standard</h2>
-        <p class="sub" data-i18n="sec_perf_sub">We evaluate performance through observable outcomes...</p>
+            <section class="section" id="technology-overview">
+                <div class="container">
+                    <h2>Technology Architecture</h2>
+                    <p class="sub">
+                        Our comprehensive system integrates IoT sensors, edge
+                        computing, and cloud analytics to deliver real-time
+                        insights from farm to management.
+                    </p>
 
-        <div class="card" style="padding:0; overflow:hidden;">
-          <div style="overflow:auto;">
-            <table style="width:100%; border-collapse:collapse; min-width: 760px;">
-              <thead>
-                <tr style="background: rgba(136,152,119,0.14);">
-                  <th style="text-align:left; padding:12px;" data-i18n="perf_tbl_h1">Category</th>
-                  <th style="text-align:left; padding:12px;" data-i18n="perf_tbl_h2">Industry standard reality</th>
-                  <th style="text-align:left; padding:12px;" data-i18n="perf_tbl_h3">Biofeed approach</th>
-                  <th style="text-align:left; padding:12px;" data-i18n="perf_tbl_h4">Expected outcome</th>
-                </tr>
-              </thead>
-              <tbody id="perfBody"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div class="tech-architecture">
+                        <img
+                            src="assets/img/farmsense/graph.jpeg"
+                            alt="Complete IoT system architecture showing sensors, edge computing, and cloud analytics"
+                            class="architecture-diagram"
+                        />
+                    </div>
 
-    <section class="section" id="traceability">
-      <div class="container">
-        <h2 data-i18n="sec_trace_t">Tracking & Traceability</h2>
-        <p class="sub" data-i18n="sec_trace_sub">Proof beats promises. Our traceability approach is designed to be
-          simple for farmers and credible for partners.</p>
+                    <div class="grid-3" style="margin-top: 3rem">
+                        <div class="card">
+                            <h3>Sensor Network</h3>
+                            <p>
+                                Environmental monitoring with temperature,
+                                humidity, soil conditions, and livestock
+                                tracking sensors throughout the farm.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Edge Computing</h3>
+                            <p>
+                                Local data processing and real-time decision
+                                making at the farm level for immediate response
+                                to critical conditions.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Cloud Analytics</h3>
+                            <p>
+                                Advanced AI algorithms analyze patterns, predict
+                                outcomes, and provide actionable insights for
+                                farm optimization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3 data-i18n="t1_t">Batch IDs</h3>
-            <p data-i18n="t1_p">Every production run receives a batch ID that links to inputs, dates, mixing logs, and
-              QC checks.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="t2_t">Supplier records</h3>
-            <p data-i18n="t2_p">We keep structured records for supplier documents and ingredient sourcing for audits and
-              export partners.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="t3_t">No‑GMO documentation</h3>
-            <p data-i18n="t3_p">Non‑GMO rules are built into procurement. We keep supporting paperwork by batch.</p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="t4_t">QR label option</h3>
-            <p data-i18n="t4_p">Optional QR labels on bags so customers can verify batch details instantly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+            <section class="section" id="traceability">
+                <div class="container">
+                    <h2 data-i18n="sec_trace_t">Tracking & Traceability</h2>
+                    <p class="sub" data-i18n="sec_trace_sub">
+                        Proof beats promises. Our traceability approach is
+                        designed to be simple for farmers and credible for
+                        partners.
+                    </p>
 
+                    <div class="grid-2">
+                        <div class="card">
+                            <h3 data-i18n="t1_t">Batch IDs</h3>
+                            <p data-i18n="t1_p">
+                                Every production run receives a batch ID that
+                                links to inputs, dates, mixing logs, and QC
+                                checks.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="t2_t">Supplier records</h3>
+                            <p data-i18n="t2_p">
+                                We keep structured records for supplier
+                                documents and ingredient sourcing for audits and
+                                export partners.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="t3_t">No‑GMO documentation</h3>
+                            <p data-i18n="t3_p">
+                                Non‑GMO rules are built into procurement. We
+                                keep supporting paperwork by batch.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3 data-i18n="t4_t">QR label option</h3>
+                            <p data-i18n="t4_p">
+                                Optional QR labels on bags so customers can
+                                verify batch details instantly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="section" id="video">
-      <div class="container">
-        <h2 data-i18n="sec_video_t">Video Presentation</h2>
-        <p class="sub" data-i18n="sec_video_sub">Your official brand presentation video will be embedded here...</p>
+            <section class="section" id="video">
+                <div class="container">
+                    <h2 data-i18n="sec_video_t">Video Presentation</h2>
+                    <p class="sub" data-i18n="sec_video_sub">
+                        Your official brand presentation video will be embedded
+                        here...
+                    </p>
 
-        <div class="card">
-          <div
-            style="position:relative; padding-top:56.25%; border-radius:16px; overflow:hidden; border:1px solid rgba(63,101,62,0.18); background: rgba(229,210,177,0.22);">
-            <div
-              style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px; text-align:center; padding:18px;">
-              <div
-                style="width:62px;height:62px;border-radius:18px;background: rgba(63,101,62,0.14); border:1px solid rgba(63,101,62,0.18); display:flex; align-items:center; justify-content:center; font-weight:900; color: var(--deep-green);">
-                ▶
-              </div>
-              <div style="font-weight:900;">Video Placeholder</div>
-              <div style="max-width:520px; color: rgba(30,42,30,0.72); line-height:1.55; font-size:14px;">
-                Replace this block with your YouTube/Vimeo embed code or hosted MP4.
-              </div>
-              <div class="pills">
-                <span class="pill">Brand story</span>
-                <span class="pill">Factory</span>
-                <span class="pill">Traceability</span>
-                <span class="pill">Results</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <div class="card">
+                        <div
+                            style="
+                                position: relative;
+                                padding-top: 56.25%;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                border: 1px solid rgba(63, 101, 62, 0.18);
+                                background: rgba(229, 210, 177, 0.22);
+                            "
+                        >
+                            <div
+                                style="
+                                    position: absolute;
+                                    inset: 0;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    text-align: center;
+                                    padding: 18px;
+                                "
+                            >
+                                <div
+                                    style="
+                                        width: 62px;
+                                        height: 62px;
+                                        border-radius: 18px;
+                                        background: rgba(63, 101, 62, 0.14);
+                                        border: 1px solid
+                                            rgba(63, 101, 62, 0.18);
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-weight: 900;
+                                        color: var(--deep-green);
+                                    "
+                                >
+                                    ▶
+                                </div>
+                                <div style="font-weight: 900">
+                                    Video Placeholder
+                                </div>
+                                <div
+                                    style="
+                                        max-width: 520px;
+                                        color: rgba(30, 42, 30, 0.72);
+                                        line-height: 1.55;
+                                        font-size: 14px;
+                                    "
+                                >
+                                    Replace this block with your YouTube/Vimeo
+                                    embed code or hosted MP4.
+                                </div>
+                                <div class="pills">
+                                    <span class="pill">Brand story</span>
+                                    <span class="pill">Factory</span>
+                                    <span class="pill">Traceability</span>
+                                    <span class="pill">Results</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="section" id="more">
+                <div class="container">
+                    <h2 data-i18n="sec_more_t">More value for farms</h2>
+                    <p class="sub" data-i18n="sec_more_sub">
+                        Built for adoption...
+                    </p>
+                    <div class="grid-2">
+                        <div class="card">
+                            <h3 style="margin-top: 0">Why this matters</h3>
+                            <ul class="list" id="moreBullets"></ul>
+                        </div>
+                        <div class="card">
+                            <h3 style="margin-top: 0">Operational readiness</h3>
+                            <p class="small">
+                                Designed for disciplined industrial deployment
+                                and partner confidence: documentation, access
+                                control, and replicable production logic.
+                            </p>
+                            <div class="pills" style="margin-top: 10px">
+                                <span class="pill">Audit-friendly</span>
+                                <span class="pill">Bank-ready</span>
+                                <span class="pill">Export-ready</span>
+                                <span class="pill">Local sourcing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="section" id="more">
-      <div class="container">
-        <h2 data-i18n="sec_more_t">More value for farms</h2>
-        <p class="sub" data-i18n="sec_more_sub">Built for adoption...</p>
-        <div class="grid-2">
-          <div class="card">
-            <h3 style="margin-top:0;">Why this matters</h3>
-            <ul class="list" id="moreBullets"></ul>
-          </div>
-          <div class="card">
-            <h3 style="margin-top:0;">Operational readiness</h3>
-            <p class="small">Designed for disciplined industrial deployment and partner confidence: documentation,
-              access control, and replicable production logic.</p>
-            <div class="pills" style="margin-top:10px;">
-              <span class="pill">Audit-friendly</span>
-              <span class="pill">Bank-ready</span>
-              <span class="pill">Export-ready</span>
-              <span class="pill">Local sourcing</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <section class="section" id="faqwrap">
+                <div class="container">
+                    <h2 data-i18n="sec_faq_t">FAQ</h2>
+                    <div class="grid-2" id="faq"></div>
+                </div>
+            </section>
 
-    <section class="section" id="faqwrap">
-      <div class="container">
-        <h2 data-i18n="sec_faq_t">FAQ</h2>
-        <div class="grid-2" id="faq"></div>
-      </div>
-    </section>
+            <section class="section" id="contact">
+                <div class="container">
+                    <h2 data-i18n="sec_contact_t">Contact</h2>
+                    <p class="sub" data-i18n="sec_contact_sub">
+                        Tell us what you raise, your location, and monthly
+                        volume — we’ll recommend the best product line and
+                        pricing.
+                    </p>
 
-    <section class="section" id="contact">
-      <div class="container">
-        <h2 data-i18n="sec_contact_t">Contact</h2>
-        <p class="sub" data-i18n="sec_contact_sub">Tell us what you raise, your location, and monthly volume — we’ll
-          recommend the best product line and pricing.</p>
+                    <div class="grid-2">
+                        <div class="card">
+                            <form class="form" id="contactForm">
+                                <div class="row">
+                                    <input
+                                        class="input"
+                                        name="name"
+                                        data-i18n-placeholder="form_name"
+                                        placeholder="Full name"
+                                        required
+                                    />
+                                    <input
+                                        class="input"
+                                        name="company"
+                                        data-i18n-placeholder="form_company"
+                                        placeholder="Farm / Company"
+                                    />
+                                </div>
+                                <div class="row">
+                                    <input
+                                        class="input"
+                                        name="email"
+                                        type="email"
+                                        data-i18n-placeholder="form_email"
+                                        placeholder="Email"
+                                        required
+                                    />
+                                    <input
+                                        class="input"
+                                        name="phone"
+                                        data-i18n-placeholder="form_phone"
+                                        placeholder="Phone"
+                                    />
+                                </div>
+                                <input
+                                    class="input"
+                                    name="subject"
+                                    data-i18n-placeholder="form_subject"
+                                    placeholder="Subject"
+                                    required
+                                />
+                                <textarea
+                                    class="input"
+                                    name="message"
+                                    data-i18n-placeholder="form_message"
+                                    placeholder="Message"
+                                    required
+                                ></textarea>
+                                <button
+                                    class="btn btn-primary"
+                                    type="submit"
+                                    data-i18n="form_send"
+                                >
+                                    Send message
+                                </button>
+                            </form>
+                            <div
+                                class="notice"
+                                style="margin-top: 10px"
+                                data-i18n="note"
+                            >
+                                Note: This website is ready to deploy. Update
+                                your WhatsApp number and social links in
+                                assets/js/config.js.
+                            </div>
+                        </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <form class="form" id="contactForm">
-              <div class="row">
-                <input class="input" name="name" data-i18n-placeholder="form_name" placeholder="Full name" required />
-                <input class="input" name="company" data-i18n-placeholder="form_company" placeholder="Farm / Company" />
-              </div>
-              <div class="row">
-                <input class="input" name="email" type="email" data-i18n-placeholder="form_email" placeholder="Email"
-                  required />
-                <input class="input" name="phone" data-i18n-placeholder="form_phone" placeholder="Phone" />
-              </div>
-              <input class="input" name="subject" data-i18n-placeholder="form_subject" placeholder="Subject" required />
-              <textarea class="input" name="message" data-i18n-placeholder="form_message" placeholder="Message"
-                required></textarea>
-              <button class="btn btn-primary" type="submit" data-i18n="form_send">Send message</button>
-            </form>
-            <div class="notice" style="margin-top: 10px;" data-i18n="note">
-              Note: This website is ready to deploy. Update your WhatsApp number and social links in
-              assets/js/config.js.
-            </div>
-          </div>
+                        <div class="card">
+                            <h3 style="margin-top: 0">
+                                Livestock Biofeed Inc.
+                            </h3>
+                            <p class="small">
+                                <b>Tagline:</b> Feed Better<br />
+                                <b>Location:</b> Toronto, Ontario (Canada)<br />
+                                <b>Focus:</b> Biological, non‑GMO livestock
+                                nutrition with traceability and documentation.
+                            </p>
+                            <div class="pills" style="margin-top: 10px">
+                                <span class="pill">Poultry</span>
+                                <span class="pill">Fish</span>
+                                <span class="pill">Multi-species</span>
+                                <span class="pill">Custom formulation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <div class="card">
-            <h3 style="margin-top:0;">Livestock Biofeed Inc.</h3>
-            <p class="small">
-              <b>Tagline:</b> Feed Better<br />
-              <b>Location:</b> Toronto, Ontario (Canada)<br />
-              <b>Focus:</b> Biological, non‑GMO livestock nutrition with traceability and documentation.
-            </p>
-            <div class="pills" style="margin-top:10px;">
-              <span class="pill">Poultry</span>
-              <span class="pill">Fish</span>
-              <span class="pill">Multi-species</span>
-              <span class="pill">Custom formulation</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div>
+                            <div class="brand" style="gap: 10px">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                                <div class="name">
+                                    <strong>Livestock Biofeed Inc.</strong>
+                                    <span>Feed Better</span>
+                                </div>
+                            </div>
+                            <p class="small" style="margin-top: 10px">
+                                © <span id="year"></span> Livestock Biofeed Inc.
+                                All rights reserved.
+                            </p>
+                            <script>
+                                document.getElementById("year").textContent =
+                                    new Date().getFullYear();
+                            </script>
+                        </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="brand" style="gap:10px;">
-              <img src="assets/img/logo.png" alt="Logo" />
-              <div class="name">
-                <strong>Livestock Biofeed Inc.</strong>
-                <span>Feed Better</span>
-              </div>
-            </div>
-            <p class="small" style="margin-top:10px;">
-              © <span id="year"></span> Livestock Biofeed Inc. All rights reserved.
-            </p>
-            <script>
-              document.getElementById('year').textContent = new Date().getFullYear();
-            </script>
-          </div>
+                        <div>
+                            <h3
+                                style="margin-top: 0"
+                                data-i18n="footer_right_t"
+                            >
+                                Resources
+                            </h3>
+                            <p class="small" data-i18n="footer_right_p">
+                                Performance reports, case studies, and technical
+                                documentation.
+                            </p>
+                            <div class="pills">
+                                <a class="pill" href="performance-report.html"
+                                    >Performance Report</a
+                                >
+                                <a class="pill" href="privacy-policy.html"
+                                    >Privacy Policy</a
+                                >
+                                <a class="pill" href="terms-of-service.html"
+                                    >Terms of Service</a
+                                >
+                                <a
+                                    class="pill"
+                                    id="ig"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener"
+                                    data-i18n="social_ig"
+                                    >Instagram</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-          <div>
-            <h3 style="margin-top:0;" data-i18n="footer_right_t">Connect</h3>
-            <p class="small" data-i18n="footer_right_p">Follow us and contact our team. We respond fast on WhatsApp.</p>
-            <div class="pills">
-              <a class="pill" id="ig" href="#" target="_blank" rel="noopener" data-i18n="social_ig">Instagram</a>
-              <a class="pill" id="fb" href="#" target="_blank" rel="noopener" data-i18n="social_fb">Facebook</a>
-              <a class="pill" id="ln" href="#" target="_blank" rel="noopener" data-i18n="social_ln">LinkedIn</a>
-              <a class="pill" id="yt" href="#" target="_blank" rel="noopener" data-i18n="social_yt">YouTube</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            <section class="trust-section">
+                <div class="container">
+                    <div class="trust-grid">
+                        <div class="trust-item">
+                            <h4>Privacy Policy</h4>
+                            <p>
+                                <a href="/privacy-policy.html"
+                                    >View our privacy policy</a
+                                >
+                            </p>
+                        </div>
+                        <div class="trust-item">
+                            <h4>Terms of Service</h4>
+                            <p>
+                                <a href="/terms-of-service.html"
+                                    >View our terms of service</a
+                                >
+                            </p>
+                        </div>
+                        <div class="trust-item">
+                            <h4>Company Info</h4>
+                            <p>
+                                Livestock Biofeed Inc.<br />Founded 2020<br />Toronto,
+                                Ontario, Canada
+                            </p>
+                        </div>
+                        <div class="trust-item">
+                            <h4>Contact</h4>
+                            <p>
+                                123 Farm Technology Blvd<br />Toronto, ON M5V
+                                3A8<br />+1 (416) 555-0123
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <a class="floating-whatsapp" id="waBtn" href="#" target="_blank" rel="noopener">
-      <div style="width:10px;height:10px;border-radius:50%;background:var(--accent);"></div>
-      <div>
-        <span data-i18n="wh_title">WhatsApp</span>
-        <small data-i18n="wh_sub">Chat with us</small>
-      </div>
-    </a>
-  </main>
-</body>
-
+            <a
+                class="floating-whatsapp"
+                id="waBtn"
+                href="#"
+                target="_blank"
+                rel="noopener"
+            >
+                <div
+                    style="
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: var(--accent);
+                    "
+                ></div>
+                <div>
+                    <span data-i18n="wh_title">WhatsApp</span>
+                    <small data-i18n="wh_sub">Chat with us</small>
+                </div>
+            </a>
+        </main>
+    </body>
 </html>

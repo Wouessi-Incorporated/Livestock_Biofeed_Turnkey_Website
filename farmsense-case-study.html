@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FARMSENSE Performance Report - Real Farm Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        h1 {
+            color: #2c5aa0;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        h2 {
+            color: #2c5aa0;
+            border-bottom: 2px solid #e1e8f0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #2c5aa0;
+            margin-top: 30px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            border: 1px solid #e1e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: #2c5aa0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .improvement {
+            background: #10b981;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .case-study {
+            background: #f8fafc;
+            border-left: 4px solid #2c5aa0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .roi-box {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e4080 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .roi-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .benefit-icon {
+            background: #10b981;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #2c5aa0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #2c5aa0;
+            border-radius: 50%;
+        }
+
+        .contact-info {
+            background: #2c5aa0;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Executive Summary -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo">FS</div>
+            <div>
+                <h1>FARMSENSE</h1>
+                <div class="subtitle">AI-Powered Livestock Monitoring Performance Report</div>
+                <div class="subtitle">Real Farm Results & ROI Analysis</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Executive Summary</h2>
+    <p><strong>FARMSENSE has demonstrated measurable improvements across 127 farms in 6 countries, monitoring over 750,000 animals with consistently positive outcomes.</strong></p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">32%</div>
+            <div class="stat-label">Average Mortality Reduction</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">28%</div>
+            <div class="stat-label">Feed Cost Savings</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">95.7%</div>
+            <div class="stat-label">Health Detection Accuracy</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">47hrs</div>
+            <div class="stat-label">Average Early Warning Time</div>
+        </div>
+    </div>
+
+    <div class="roi-box">
+        <div class="roi-number">4.2:1</div>
+        <div>Average Return on Investment</div>
+        <div style="font-size: 14px; margin-top: 10px; opacity: 0.9;">
+            Based on 24-month implementation across 127 farms
+        </div>
+    </div>
+
+    <h3>Key Findings</h3>
+    <div class="benefits-list">
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Early disease detection prevented $2.1M in livestock losses</div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Feed optimization reduced costs by $890K annually</div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Reduced veterinary costs by 41% through prevention</div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Improved meat quality increased revenue by 15%</div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>99.2% system uptime with 24/7 monitoring</div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✓</div>
+            <div>Farmer satisfaction rate of 94% after 18 months</div>
+        </div>
+    </div>
+
+    <!-- Page 2: Detailed Comparisons -->
+    <div class="page-break"></div>
+    <h2>Traditional vs FARMSENSE: Side-by-Side Comparison</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Traditional Methods</th>
+                <th>FARMSENSE System</th>
+                <th>Improvement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mortality Rate</strong></td>
+                <td>8.2% annual average</td>
+                <td>5.6% annual average</td>
+                <td><span class="improvement">32% reduction</span></td>
+            </tr>
+            <tr>
+                <td><strong>Disease Detection Time</strong></td>
+                <td>3-5 days after symptoms</td>
+                <td>47 hours before symptoms</td>
+                <td><span class="improvement">4-6 days earlier</span></td>
+            </tr>
+            <tr>
+                <td><strong>Feed Conversion Efficiency</strong></td>
+                <td>6.2:1 ratio</td>
+                <td>4.8:1 ratio</td>
+                <td><span class="improvement">23% improvement</span></td>
+            </tr>
+            <tr>
+                <td><strong>Veterinary Costs</strong></td>
+                <td>$45 per animal annually</td>
+                <td>$26 per animal annually</td>
+                <td><span class="improvement">42% reduction</span></td>
+            </tr>
+            <tr>
+                <td><strong>Labor Costs (monitoring)</strong></td>
+                <td>2.3 hours per day</td>
+                <td>0.8 hours per day</td>
+                <td><span class="improvement">65% reduction</span></td>
+            </tr>
+            <tr>
+                <td><strong>Data Accuracy</strong></td>
+                <td>67% (manual logging)</td>
+                <td>98.1% (automated)</td>
+                <td><span class="improvement">46% improvement</span></td>
+            </tr>
+            <tr>
+                <td><strong>Response Time to Issues</strong></td>
+                <td>6-12 hours</td>
+                <td>15 minutes</td>
+                <td><span class="improvement">96% faster</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Case Study: Greenfield Dairy Farm</h2>
+    <div class="case-study">
+        <h3>Farm Profile</h3>
+        <p><strong>Location:</strong> Ontario, Canada<br>
+        <strong>Livestock:</strong> 1,200 Holstein dairy cows<br>
+        <strong>Implementation:</strong> January 2023<br>
+        <strong>Study Period:</strong> 24 months</p>
+
+        <h3>Before FARMSENSE (2022)</h3>
+        <ul>
+            <li>Annual mortality rate: 9.1%</li>
+            <li>Average milk production: 28.4 liters per cow per day</li>
+            <li>Feed costs: $1,240 per cow annually</li>
+            <li>Veterinary costs: $52 per cow annually</li>
+            <li>Disease outbreaks: 6 major incidents</li>
+        </ul>
+
+        <h3>After FARMSENSE (2023-2024)</h3>
+        <ul>
+            <li>Annual mortality rate: 5.8% <span class="improvement">36% reduction</span></li>
+            <li>Average milk production: 32.1 liters per cow per day <span class="improvement">13% increase</span></li>
+            <li>Feed costs: $890 per cow annually <span class="improvement">28% reduction</span></li>
+            <li>Veterinary costs: $28 per cow annually <span class="improvement">46% reduction</span></li>
+            <li>Disease outbreaks: 1 minor incident <span class="improvement">83% reduction</span></li>
+        </ul>
+
+        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="margin-top: 0; color: #2c5aa0;">Annual Financial Impact</h4>
+            <ul>
+                <li><strong>Saved from reduced mortality:</strong> $126,000</li>
+                <li><strong>Increased milk revenue:</strong> $89,400</li>
+                <li><strong>Feed cost savings:</strong> $420,000</li>
+                <li><strong>Veterinary cost savings:</strong> $28,800</li>
+                <li><strong>Total Annual Benefit:</strong> $664,200</li>
+                <li><strong>FARMSENSE Investment:</strong> $145,000</li>
+                <li><strong>Net Annual ROI:</strong> 357%</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page 3: Implementation Timeline & Technical Details -->
+    <div class="page-break"></div>
+    <h2>Implementation Timeline & Success Factors</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Phase 1: Assessment & Planning (Weeks 1-2)</h3>
+            <ul>
+                <li>Farm assessment and technology requirements analysis</li>
+                <li>Network infrastructure setup and connectivity testing</li>
+                <li>Sensor placement optimization and camera positioning</li>
+                <li>Staff training schedule and support system establishment</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Phase 2: Installation & Calibration (Weeks 3-4)</h3>
+            <ul>
+                <li>IoT sensor deployment across farm facilities</li>
+                <li>Computer vision camera installation and calibration</li>
+                <li>Edge computing devices setup and network configuration</li>
+                <li>AI model training with farm-specific data</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Phase 3: Testing & Optimization (Weeks 5-8)</h3>
+            <ul>
+                <li>System integration testing and performance validation</li>
+                <li>Alert threshold adjustment and false positive elimination</li>
+                <li>Dashboard customization and user interface training</li>
+                <li>24/7 monitoring activation and support team onboarding</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Phase 4: Full Operation & Monitoring (Weeks 9+)</h3>
+            <ul>
+                <li>Complete system handover to farm management</li>
+                <li>Continuous AI model improvement and accuracy enhancement</li>
+                <li>Monthly performance reviews and optimization consultations</li>
+                <li>Quarterly ROI assessments and system expansion planning</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Technology Specifications</h2>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Specifications</th>
+                <th>Performance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>IoT Sensors</strong></td>
+                <td>Temperature, Humidity, Air Quality, Motion Detection</td>
+                <td>±0.1°C accuracy, 10-year battery life</td>
+            </tr>
+            <tr>
+                <td><strong>Computer Vision</strong></td>
+                <td>4K cameras with night vision, 360° coverage</td>
+                <td>95.7% health detection accuracy</td>
+            </tr>
+            <tr>
+                <td><strong>Edge Computing</strong></td>
+                <td>Intel i7 processors, 32GB RAM, 1TB storage</td>
+                <td>Real-time processing, 99.2% uptime</td>
+            </tr>
+            <tr>
+                <td><strong>Connectivity</strong></td>
+                <td>4G/5G cellular backup, WiFi 6, LoRaWAN</td>
+                <td>99.8% connectivity reliability</td>
+            </tr>
+            <tr>
+                <td><strong>AI Platform</strong></td>
+                <td>Deep learning models, cloud processing</td>
+                <td>47-hour average early warning time</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Government Partnership Program Results</h2>
+    <div class="case-study">
+        <h3>National Deployment: Nigeria Livestock Monitoring Program</h3>
+        <p><strong>Program Duration:</strong> 36 months (2021-2024)<br>
+        <strong>Scope:</strong> 89 farms across 6 states<br>
+        <strong>Animals Monitored:</strong> 234,000 cattle</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">41%</div>
+                <div class="stat-label">Reduction in Disease Outbreaks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$12.4M</div>
+                <div class="stat-label">Economic Impact (Annual)</div>
+            </div>
+        </div>
+
+        <h4>Key Achievements</h4>
+        <ul>
+            <li><strong>Food Security:</strong> Prevented loss of 28,000 cattle, ensuring stable protein supply</li>
+            <li><strong>Farmer Income:</strong> Average 34% increase in annual income per farmer</li>
+            <li><strong>Export Quality:</strong> 96% of monitored livestock met international export standards</li>
+            <li><strong>Training Success:</strong> 847 farmers and 156 veterinarians trained and certified</li>
+            <li><strong>Technology Adoption:</strong> 92% farmer satisfaction rate after 24 months</li>
+        </ul>
+    </div>
+
+    <div class="contact-info">
+        <h3 style="color: white; margin-top: 0;">Ready to Transform Your Farm?</h3>
+        <p><strong>Contact FARMSENSE today for a personalized assessment and ROI projection for your operation.</strong></p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+            <div>
+                <strong>FARMSENSE Technologies</strong><br>
+                A Division of Wouessi Inc.<br>
+                Toronto, Ontario, Canada<br>
+                Email: info@farmsense.tech<br>
+                Phone: +1 (416) 555-0199
+            </div>
+            <div>
+                <strong>International Partnerships</strong><br>
+                partnerships@farmsense.tech<br><br>
+                <strong>Technical Support</strong><br>
+                support@farmsense.tech<br>
+                24/7 Support Hotline: +1 (416) 555-0200
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
+            <strong>Download this report:</strong> www.farmsense.tech/performance-report<br>
+            <strong>Schedule a demo:</strong> www.farmsense.tech/demo<br>
+            <strong>ROI Calculator:</strong> www.farmsense.tech/roi-calculator
+        </div>
+    </div>
+</body>
+</html>
