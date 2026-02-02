@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Checkout | Livestock Biofeed</title>
+    <link rel="icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/ecommerce.css" />
+</head>
+
+<body class="ecommerce-body">
+    <header class="ecommerce-topbar">
+        <div class="ecommerce-wrap ecommerce-nav">
+            <div class="ecommerce-brand">
+                <a href="cart.html" class="ecommerce-pill">← <span data-i18n="cart.title">Cart</span></a>
+                <span class="ecommerce-pill" data-i18n="checkout.title">Checkout</span>
+            </div>
+            <div class="ecommerce-row">
+                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="ecommerce-wrap">
+        <h1 class="ecommerce-h1" data-i18n="checkout.title">Checkout</h1>
+
+        <div class="ecommerce-two">
+            <section class="ecommerce-card">
+                <div class="ecommerce-p">
+                    <h2 class="ecommerce-h2" data-i18n="checkout.customer">Customer info</h2>
+                    <form id="checkoutForm" class="ecommerce-col">
+                        <div class="ecommerce-col">
+                            <label class="ecommerce-label" data-i18n="checkout.name">Full name</label>
+                            <input class="ecommerce-input" type="text" name="name" required />
+                        </div>
+                        <div class="ecommerce-col">
+                            <label class="ecommerce-label" data-i18n="checkout.country">Country</label>
+                            <select class="ecommerce-select" name="country" required>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="FR">France</option>
+                                <option value="DE">Germany</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="CI">Ivory Coast</option>
+                            </select>
+                        </div>
+                        <div class="ecommerce-col">
+                            <label class="ecommerce-label" data-i18n="checkout.address">Address</label>
+                            <input class="ecommerce-input" type="text" name="address" required />
+                        </div>
+
+                        <div class="ecommerce-line"></div>
+
+                        <button class="ecommerce-cta" type="submit" id="payBtn">
+                            <span data-i18n="checkout.pay">Pay</span> <span id="btnTotal"></span>
+                        </button>
+                        <div class="ecommerce-row" style="margin-top:10px; justify-content:center">
+                            <small class="ecommerce-muted" data-i18n="pay.stripe">Pay by Card (Stripe)</small>
+                            <small class="ecommerce-muted" style="margin:0 10px">•</small>
+                            <small class="ecommerce-muted" data-i18n="pay.paypal">Pay with PayPal</small>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <aside>
+                <div class="ecommerce-card">
+                    <div class="ecommerce-p">
+                        <h2 class="ecommerce-h2" data-i18n="checkout.summary">Order summary</h2>
+                        <div id="summaryItems"></div>
+                        <div class="ecommerce-line"></div>
+                        <div class="ecommerce-col" style="gap:10px">
+                            <div class="ecommerce-row" style="justify-content:space-between">
+                                <span data-i18n="checkout.subtotal">Subtotal</span>
+                                <span id="subtotal">...</span>
+                            </div>
+                            <div class="ecommerce-row" style="justify-content:space-between">
+                                <span data-i18n="checkout.shipping">Shipping</span>
+                                <span id="shipping">...</span>
+                            </div>
+                            <div class="ecommerce-row" style="justify-content:space-between">
+                                <span data-i18n="checkout.taxes">Taxes</span>
+                                <span id="taxes">...</span>
+                            </div>
+                            <div class="ecommerce-line"></div>
+                            <div class="ecommerce-row"
+                                style="justify-content:space-between; font-weight:900; font-size:18px">
+                                <span data-i18n="checkout.total">Total</span>
+                                <span id="total">...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="ecommerce-footer">
+            <div data-i18n="checkout.footer">Secure checkout. Proprietary funnel.</div>
+        </div>
+    </main>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/shop/cart.js"></script>
+    <script src="../assets/js/shop/checkout.js"></script>
+</body>
+
+</html>

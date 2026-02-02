@@ -1,0 +1,28 @@
+{
+  "currency": "CAD",
+  "taxes": {
+    "enabled": false,
+    "default_rate": 0.0,
+    "by_country": {
+      "CA": 0.13,
+      "FR": 0.2
+    }
+  },
+  "shipping": {
+    "enabled": true,
+    "methods": [
+      {
+        "id": "standard",
+        "label_en": "Standard shipping",
+        "label_fr": "Livraison standard",
+        "flat_fee": 19.99
+      },
+      {
+        "id": "pickup",
+        "label_en": "Pickup (arranged)",
+        "label_fr": "Retrait (sur rendez-vous)",
+        "flat_fee": 0.0
+      }
+    ]
+  }
+}

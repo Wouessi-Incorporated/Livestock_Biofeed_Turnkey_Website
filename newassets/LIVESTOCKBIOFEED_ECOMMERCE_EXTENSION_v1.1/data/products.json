@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ponte",
+    "name": "Bio-Aliment Ponte+",
+    "price": 39.99,
+    "weight": "50kg"
+  },
+  {
+    "id": "broiler",
+    "name": "Bio-Aliment Poulet Chair",
+    "price": 42.5,
+    "weight": "50kg"
+  },
+  {
+    "id": "tilapia",
+    "name": "Bio-Aliment Tilapia Max",
+    "price": 48.0,
+    "weight": "50kg"
+  },
+  {
+    "id": "rumi",
+    "name": "Bio-Aliment RumiBoost",
+    "price": 35.0,
+    "weight": "50kg"
+  },
+  {
+    "id": "porc",
+    "name": "Bio-Aliment Porc Optimizer",
+    "price": 44.0,
+    "weight": "50kg"
+  },
+  {
+    "id": "agristack_small",
+    "name": "AGRISTACK SMALL",
+    "price": 0.0,
+    "weight": "N/A",
+    "type": "solution",
+    "cta": "buy"
+  },
+  {
+    "id": "agristack_medium",
+    "name": "AGRISTACK MEDIUM",
+    "price": 0.0,
+    "weight": "N/A",
+    "type": "solution",
+    "cta": "quote"
+  },
+  {
+    "id": "agristack_large_pro",
+    "name": "AGRISTACK LARGE / PRO",
+    "price": 0.0,
+    "weight": "N/A",
+    "type": "solution",
+    "cta": "quote"
+  }
+]

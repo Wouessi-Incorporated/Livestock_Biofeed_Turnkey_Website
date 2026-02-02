@@ -112,7 +112,39 @@ const i18n = {
     social_ln: "LinkedIn",
     social_yt: "YouTube",
     wh_title: "WhatsApp",
-    wh_sub: "Chat with us"
+    wh_sub: "Chat with us",
+    "shop.subtitle": "Shop",
+    "shop.title": "Shop Livestock Biofeed",
+    "shop.desc": "Premium biological feed and AGRISTACK solutions. Add products to cart and checkout with Stripe or PayPal.",
+    "shop.biofeed": "BioFeed products",
+    "shop.agristack": "AGRI-STACK™ solutions",
+    "shop.footer": "Secure checkout. Proprietary funnel.",
+    "crumb.home": "Home",
+    "crumb.shop": "Shop",
+    "cta.buy_now": "Buy now",
+    "cta.add_to_cart": "Add to cart",
+    "product.cross": "Optimize with AGRISTACK™",
+    "product.details": "Details",
+    "product.footer": "Secure checkout. Proprietary funnel.",
+    "cart.title": "Cart",
+    "cart.total": "Total",
+    "cart.continue": "Continue shopping",
+    "cart.checkout": "Checkout",
+    "cart.footer": "Secure checkout.",
+    "checkout.title": "Checkout",
+    "checkout.customer": "Customer info",
+    "checkout.name": "Full name",
+    "checkout.country": "Country",
+    "checkout.address": "Address",
+    "checkout.pay": "Pay",
+    "checkout.summary": "Order summary",
+    "checkout.subtotal": "Subtotal",
+    "checkout.shipping": "Shipping",
+    "checkout.taxes": "Taxes",
+    "checkout.total": "Total",
+    "checkout.footer": "Secure checkout. Proprietary funnel.",
+    "pay.stripe": "Pay by Card (Stripe)",
+    "pay.paypal": "Pay with PayPal"
   },
   fr: {
     nav_features: "Caractéristiques",
@@ -226,7 +258,39 @@ const i18n = {
     social_ln: "LinkedIn",
     social_yt: "YouTube",
     wh_title: "WhatsApp",
-    wh_sub: "Discuter"
+    wh_sub: "Discuter",
+    "shop.subtitle": "Boutique",
+    "shop.title": "Boutique Livestock Biofeed",
+    "shop.desc": "Aliments biologiques premium et solutions AGRISTACK. Ajoutez au panier et payez via Stripe ou PayPal.",
+    "shop.biofeed": "Produits BioFeed",
+    "shop.agristack": "Solutions AGRI-STACK™",
+    "shop.footer": "Paiement sécurisé. Funnel propriétaire.",
+    "crumb.home": "Accueil",
+    "crumb.shop": "Boutique",
+    "cta.buy_now": "Acheter maintenant",
+    "cta.add_to_cart": "Ajouter au panier",
+    "product.cross": "Optimisez avec AGRISTACK™",
+    "product.details": "Détails",
+    "product.footer": "Paiement sécurisé. Funnel propriétaire.",
+    "cart.title": "Panier",
+    "cart.total": "Total",
+    "cart.continue": "Continuer les achats",
+    "cart.checkout": "Commander",
+    "cart.footer": "Paiement sécurisé.",
+    "checkout.title": "Paiement",
+    "checkout.customer": "Informations client",
+    "checkout.name": "Nom complet",
+    "checkout.country": "Pays",
+    "checkout.address": "Adresse",
+    "checkout.pay": "Payer",
+    "checkout.summary": "Récapitulatif",
+    "checkout.subtotal": "Sous-total",
+    "checkout.shipping": "Livraison",
+    "checkout.taxes": "Taxes",
+    "checkout.total": "Total",
+    "checkout.footer": "Paiement sécurisé. Funnel propriétaire.",
+    "pay.stripe": "Payer par carte (Stripe)",
+    "pay.paypal": "Payer avec PayPal"
   }
 };
 
@@ -350,8 +414,11 @@ function toggleLang() {
   setLang(currentLang === "en" ? "fr" : "en");
 }
 
-// Expose to window for main.js access
+// Expose to window for main.js and shop access
 window.toggleLang = toggleLang;
+window.t = t;
+window.setLang = setLang;
+window.getCurrentLang = () => currentLang;
 
 window.addEventListener("DOMContentLoaded", () => {
   setLang(detectLang());

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Checkout | Livestock Biofeed</title>
+  <link rel="stylesheet" href="/shop/styles/ecommerce.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/shop/pages/shop.html">
+        <span class="pill">LIVESTOCK BIOFEED</span>
+        <span class="tag" id="langTag">EN</span>
+      </a>
+      <button class="cta secondary" id="langToggle">FR/EN</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="h1" data-i18n="checkout.title">Checkout</div>
+
+    <section class="card">
+      <div class="p two">
+        <div class="col">
+          <div class="h2" data-i18n="checkout.customer">Customer info</div>
+          <div class="col">
+            <label data-i18n="checkout.name">Full name</label>
+            <input id="fullName" placeholder="John Doe"/>
+          </div>
+          <div class="col">
+            <label>Email</label>
+            <input id="email" placeholder="name@example.com"/>
+          </div>
+          <div class="col">
+            <label data-i18n="checkout.country">Country</label>
+            <select id="country">
+              <option value="CA">Canada</option>
+              <option value="FR">France</option>
+              <option value="CM">Cameroon</option>
+              <option value="GA">Gabon</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="US">USA</option>
+            </select>
+          </div>
+          <div class="col">
+            <label data-i18n="checkout.address">Address</label>
+            <input id="address" placeholder="Street, city"/>
+          </div>
+
+          <div class="line"></div>
+
+          <div class="h2" data-i18n="checkout.pay">Pay</div>
+          <div class="btnrow">
+            <button class="cta" id="payStripe" data-i18n="pay.stripe">Pay by Card (Stripe)</button>
+            <button class="cta secondary" id="payPayPal" data-i18n="pay.paypal">Pay with PayPal</button>
+          </div>
+          <div class="muted" id="payStatus" style="margin-top:10px"></div>
+        </div>
+
+        <div class="col">
+          <div class="h2" data-i18n="checkout.summary">Order summary</div>
+          <div id="summaryItems" class="col"></div>
+          <div class="line"></div>
+          <div class="row" style="justify-content:space-between">
+            <div class="muted" data-i18n="checkout.subtotal">Subtotal</div>
+            <div id="subtotal">$0.00</div>
+          </div>
+          <div class="row" style="justify-content:space-between">
+            <div class="muted" data-i18n="checkout.shipping">Shipping</div>
+            <div id="shipping">$0.00</div>
+          </div>
+          <div class="row" style="justify-content:space-between">
+            <div class="muted" data-i18n="checkout.taxes">Taxes</div>
+            <div id="taxes">$0.00</div>
+          </div>
+          <div class="line"></div>
+          <div class="row" style="justify-content:space-between">
+            <div class="muted" data-i18n="checkout.total">Total</div>
+            <div class="price" id="total">$0.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer"><span data-i18n="checkout.footer">Secure checkout. Proprietary funnel.</span></div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/shop/js/i18n.js"></script>
+  <script src="/shop/js/analytics.js"></script>
+  <script src="/shop/js/cart.js"></script>
+  <script src="/shop/js/checkout.js"></script>
+</body>
+</html>

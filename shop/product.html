@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Details | Livestock Biofeed</title>
+    <link rel="icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/ecommerce.css" />
+</head>
+
+<body class="ecommerce-body">
+    <header class="ecommerce-topbar">
+        <div class="ecommerce-wrap ecommerce-nav">
+            <div class="ecommerce-brand">
+                <a href="index.html" class="ecommerce-pill">← <span data-i18n="crumb.shop">Shop</span></a>
+                <span class="ecommerce-pill" id="crumbName">...</span>
+            </div>
+            <div class="ecommerce-row">
+                <a class="ecommerce-pill" href="cart.html" id="cartLink">Cart (0)</a>
+                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="ecommerce-wrap">
+        <div class="ecommerce-two" style="margin-top:20px">
+            <section class="ecommerce-card">
+                <div class="ecommerce-imgph"></div>
+                <div class="ecommerce-p">
+                    <div class="ecommerce-tag" id="productType">BIOFEED</div>
+                    <h1 class="ecommerce-h1" id="productName" style="margin:10px 0">Product Name</h1>
+                    <div class="ecommerce-muted" id="productWeight">50kg</div>
+                    <div class="ecommerce-line"></div>
+                    <div id="productDesc" style="margin-bottom:14px; line-height:1.5">...</div>
+                    <div id="benefits" style="margin-bottom:18px; font-size:14px"></div>
+                    <div class="ecommerce-price" id="productPrice" style="font-size:28px; margin-bottom:18px"></div>
+
+                    <div class="ecommerce-btnrow">
+                        <button class="ecommerce-cta" id="addCart" data-i18n="cta.add_to_cart">Add to cart</button>
+                        <button class="ecommerce-cta secondary" id="buyNow" data-i18n="cta.buy_now">Buy now</button>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div class="ecommerce-h2" data-i18n="product.cross">Optimize with AGRISTACK™</div>
+                <div class="ecommerce-col" id="agriCards"></div>
+
+                <div class="ecommerce-card" style="margin-top:20px">
+                    <div class="ecommerce-p">
+                        <div class="ecommerce-h2" data-i18n="product.details">Details</div>
+                        <div class="ecommerce-muted" id="details" style="font-size:13px">...</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="ecommerce-footer" style="margin-top:40px">
+            <div data-i18n="product.footer">Secure checkout. Proprietary funnel.</div>
+        </div>
+    </main>
+
+    <div class="ecommerce-toast" id="toast"></div>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/shop/analytics.js"></script>
+    <script src="../assets/js/shop/cart.js"></script>
+    <script src="../assets/js/shop/product.js"></script>
+</body>
+
+</html>

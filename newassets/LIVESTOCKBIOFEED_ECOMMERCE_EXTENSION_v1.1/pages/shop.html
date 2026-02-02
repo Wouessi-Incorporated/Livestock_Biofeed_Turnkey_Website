@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shop | Livestock Biofeed</title>
+  <link rel="stylesheet" href="/shop/styles/ecommerce.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        <span class="pill">LIVESTOCK BIOFEED</span>
+        <span class="tag" id="langTag">EN</span>
+      </div>
+      <div class="row">
+        <a class="pill" href="/shop/pages/cart.html" id="cartLink">Cart (0)</a>
+        <button class="cta secondary" id="langToggle">FR/EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="p">
+        <div class="tag" data-i18n="shop.subtitle">Boutique</div>
+        <div class="h1" data-i18n="shop.title">Shop Livestock Biofeed</div>
+        <div class="muted" data-i18n="shop.desc">
+          Premium biological feed and AGRISTACK solutions. Add products to cart and checkout with Stripe or PayPal.
+        </div>
+      </div>
+    </section>
+
+    <div class="h2" style="margin-top:18px" data-i18n="shop.biofeed">BioFeed products</div>
+    <section class="grid" id="biofeedGrid"></section>
+
+    <div class="h2" style="margin-top:18px" data-i18n="shop.agristack">AGRI-STACK™ solutions</div>
+    <section class="grid" id="agriGrid"></section>
+
+    <div class="footer">
+      <div data-i18n="shop.footer">Secure checkout. Proprietary funnel.</div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/shop/js/i18n.js"></script>
+  <script src="/shop/js/analytics.js"></script>
+  <script src="/shop/js/cart.js"></script>
+  <script src="/shop/js/shop.js"></script>
+</body>
+</html>

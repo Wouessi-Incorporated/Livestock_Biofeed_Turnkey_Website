@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cart | Livestock Biofeed</title>
+    <link rel="icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/ecommerce.css" />
+</head>
+
+<body class="ecommerce-body">
+    <header class="ecommerce-topbar">
+        <div class="ecommerce-wrap ecommerce-nav">
+            <div class="ecommerce-brand">
+                <a href="index.html" class="ecommerce-pill">← <span data-i18n="crumb.shop">Shop</span></a>
+                <span class="ecommerce-pill" data-i18n="cart.title">Cart</span>
+            </div>
+            <div class="ecommerce-row">
+                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="ecommerce-wrap">
+        <h1 class="ecommerce-h1" data-i18n="cart.title">Cart</h1>
+
+        <div class="ecommerce-card">
+            <div id="cartItems"></div>
+            <div class="ecommerce-p" style="background:rgba(0,0,0,.02); border-top:1px solid var(--lbb-border)">
+                <div class="ecommerce-row" style="justify-content:space-between; font-weight:900; font-size:20px">
+                    <span data-i18n="cart.total">Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <div class="ecommerce-line"></div>
+                <div class="ecommerce-btnrow" style="justify-content:flex-end">
+                    <a class="ecommerce-cta secondary" href="index.html" data-i18n="cart.continue">Continue shopping</a>
+                    <a class="ecommerce-cta" href="checkout.html" data-i18n="cart.checkout">Checkout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ecommerce-footer">
+            <div data-i18n="cart.footer">Secure checkout.</div>
+        </div>
+    </main>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/shop/cart.js"></script>
+    <script src="../assets/js/shop/cart_page.js"></script>
+</body>
+
+</html>

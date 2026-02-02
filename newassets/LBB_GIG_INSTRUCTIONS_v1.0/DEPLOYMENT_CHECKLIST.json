@@ -1,0 +1,9 @@
+{
+  "upload_ok": false,
+  "env_configured": false,
+  "stripe_test_ok": false,
+  "paypal_test_ok": false,
+  "emails_ok": false,
+  "menu_link_added": false,
+  "no_design_change": false
+}

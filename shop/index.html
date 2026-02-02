@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop | Livestock Biofeed</title>
+    <link rel="icon" href="../assets/img/logo.png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/ecommerce.css" />
+</head>
+
+<body class="ecommerce-body">
+    <header class="ecommerce-topbar">
+        <div class="ecommerce-wrap ecommerce-nav">
+            <div class="ecommerce-brand">
+                <a href="../index.html" class="ecommerce-pill">← <span data-i18n="crumb.home">Home</span></a>
+                <span class="ecommerce-pill">LIVESTOCK BIOFEED</span>
+            </div>
+            <div class="ecommerce-row">
+                <a class="ecommerce-pill" href="cart.html" id="cartLink">Cart (0)</a>
+                <button class="ecommerce-cta secondary" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="ecommerce-wrap">
+        <section class="ecommerce-hero">
+            <div class="ecommerce-p">
+                <div class="ecommerce-tag" data-i18n="shop.subtitle">Boutique</div>
+                <h1 class="ecommerce-h1" data-i18n="shop.title">Shop Livestock Biofeed</h1>
+                <div class="ecommerce-muted" data-i18n="shop.desc">
+                    Premium biological feed and AGRISTACK solutions. Add products to cart and checkout with Stripe or
+                    PayPal.
+                </div>
+            </div>
+        </section>
+
+        <div class="ecommerce-h2" style="margin-top:24px" data-i18n="shop.biofeed">BioFeed products</div>
+        <section class="ecommerce-grid" id="biofeedGrid"></section>
+
+        <div class="ecommerce-h2" style="margin-top:24px" data-i18n="shop.agristack">AGRI-STACK™ solutions</div>
+        <section class="ecommerce-grid" id="agriGrid"></section>
+
+        <div class="ecommerce-footer">
+            <div data-i18n="shop.footer">Secure checkout. Proprietary funnel.</div>
+        </div>
+    </main>
+
+    <div class="ecommerce-toast" id="toast"></div>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/shop/analytics.js"></script>
+    <script src="../assets/js/shop/cart.js"></script>
+    <script src="../assets/js/shop/shop.js"></script>
+</body>
+
+</html>

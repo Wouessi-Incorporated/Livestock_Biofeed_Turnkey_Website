@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Product | Livestock Biofeed</title>
+  <link rel="stylesheet" href="/shop/styles/ecommerce.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/shop/pages/shop.html">
+        <span class="pill">LIVESTOCK BIOFEED</span>
+        <span class="tag" id="langTag">EN</span>
+      </a>
+      <div class="row">
+        <a class="pill" href="/shop/pages/cart.html" id="cartLink">Cart (0)</a>
+        <button class="cta secondary" id="langToggle">FR/EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="muted" style="margin-top:12px">
+      <a href="/shop/pages/shop.html" data-i18n="crumb.home">Home</a> →
+      <a href="/shop/pages/shop.html" data-i18n="crumb.shop">Shop</a> →
+      <span id="crumbName">Product</span>
+    </div>
+
+    <section class="card" style="margin-top:12px">
+      <div class="two">
+        <div>
+          <div class="imgph" id="imgPh"></div>
+          <div class="p">
+            <div class="row" style="justify-content:space-between">
+              <div>
+                <div class="tag" id="productType">BIOFEED</div>
+                <div class="h1" id="productName">Product</div>
+                <div class="muted" id="productDesc"></div>
+              </div>
+              <div>
+                <div class="price" id="productPrice"></div>
+                <div class="muted" id="productWeight"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="btnrow">
+              <button class="cta" id="buyNow" data-i18n="cta.buy_now">Buy now</button>
+              <button class="cta secondary" id="addCart" data-i18n="cta.add_to_cart">Add to cart</button>
+            </div>
+            <div class="muted" style="margin-top:10px" id="benefits"></div>
+          </div>
+        </div>
+        <div class="p">
+          <div class="h2" data-i18n="product.cross">Optimize with AGRISTACK™</div>
+          <div id="agriCards" class="col"></div>
+          <div class="line"></div>
+          <div class="h2" data-i18n="product.details">Details</div>
+          <div class="muted" id="details"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div data-i18n="product.footer">Secure checkout. Proprietary funnel.</div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/shop/js/i18n.js"></script>
+  <script src="/shop/js/analytics.js"></script>
+  <script src="/shop/js/cart.js"></script>
+  <script src="/shop/js/product.js"></script>
+</body>
+</html>
